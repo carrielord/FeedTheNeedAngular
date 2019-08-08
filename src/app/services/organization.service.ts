@@ -12,8 +12,16 @@ export class OrganizationService {
 
   constructor(private _http: HttpClient) { }
 
+  getOrganization(id: string) {
+    return this._http.get(`${ApiUrl}/Organization/${id}`, { headers: this.getHeaders() });
+  }
+
   createOrganization(organization: Organization) {
     return this._http.post(`${ApiUrl}/Organization`, organization, { headers: this.getHeaders() });
+  }
+
+  updateOrganization(organization: Organization) {
+    return this._http.put(`${ApiUrl}/Organization`, organization, { headers: this.getHeaders() });
   }
   
   private getHeaders() {
