@@ -21,6 +21,10 @@ import { UsereditComponent } from './component/useredit/useredit.component';
 import { UserdetailsComponent } from './component/userdetails/userdetails.component';
 import { PasswordchangeComponent } from './component/passwordchange/passwordchange.component';
 import { ContactpageComponent } from './component/contactpage/contactpage.component';
+import { AuthService } from './services/auth.service';
+import { OrganizationService } from './services/organization.service';
+import { PostingService } from './services/posting.service';
+import { UserService } from './services/user.service';
 
 
 
@@ -48,7 +52,12 @@ import { ContactpageComponent } from './component/contactpage/contactpage.compon
     BrowserAnimationsModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    OrganizationService,
+    PostingService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
