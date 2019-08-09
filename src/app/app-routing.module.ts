@@ -13,6 +13,7 @@ import { UserdetailsComponent } from './component/userdetails/userdetails.compon
 import { UsereditComponent } from './component/useredit/useredit.component'
 import { ContactpageComponent } from './component/contactpage/contactpage.component'
 import { NgModule } from '@angular/core';
+import { OrganizationindexComponent } from './component/organizationindex/organizationindex.component';
 
 
 const routes: Routes = [
@@ -20,8 +21,15 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'listofpostings', component: ListofpostingsComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'organizationcreate', component: OrganizationcreateComponent },
-  { path: 'organizationedit', component: OrganizationeditComponent },
+  { 
+    path: 'organizations', children: [
+      { path: '', component: OrganizationindexComponent },
+      { path: 'create', component: OrganizationindexComponent },
+      { path: 'detail/:id', component: OrganizationindexComponent },
+      { path: 'edit/:id', component: OrganizationindexComponent },
+      { path: 'delete/:id', component: OrganizationindexComponent }
+    ]
+  },
   { path: 'passwordchange', component: PasswordchangeComponent },
   { path: 'postingcreate', component: PostingcreateComponent },
   { path: 'postingdetail', component: PostingdetailComponent },

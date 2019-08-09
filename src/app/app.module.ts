@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './component/header/header.component';
 import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +17,7 @@ import { ListofpostingsComponent } from './component/listofpostings/listofpostin
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component';
 import { PostingeditComponent } from './component/postingedit/postingedit.component';
+import { OrganizationindexComponent } from './component/organizationindex/organizationindex.component';
 import { OrganizationcreateComponent } from './component/organizationcreate/organizationcreate.component';
 import { OrganizationeditComponent } from './component/organizationedit/organizationedit.component';
 import { LoginComponent } from './component/login/login.component';
@@ -35,6 +37,7 @@ const routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'listofpostings', component: ListofpostingsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'organizationindex', component: OrganizationindexComponent },
   { path: 'organizationcreate', component: OrganizationcreateComponent },
   { path: 'organizationedit', component: OrganizationeditComponent },
   { path: 'passwordchange', component: PasswordchangeComponent },
@@ -52,11 +55,13 @@ const routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
+    HeaderComponent,
     FooterComponent,
     ListofpostingsComponent,
     PostingdetailComponent,
     PostingcreateComponent,
     PostingeditComponent,
+    OrganizationindexComponent,
     OrganizationcreateComponent,
     OrganizationeditComponent,
     LoginComponent,
@@ -64,18 +69,20 @@ const routes = [
     UsereditComponent,
     UserdetailsComponent,
     PasswordchangeComponent,
-    ContactpageComponent
+    ContactpageComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-
+    BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-
+    MatTableModule,
     MatFormFieldModule,
     AppRoutingModule,
   ],
