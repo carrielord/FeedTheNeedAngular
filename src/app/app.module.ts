@@ -1,13 +1,18 @@
+
+
+
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { RouterModule} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatFormFieldModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './component/footer/footer.component';
 import { ListofpostingsComponent } from './component/listofpostings/listofpostings.component';
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
@@ -21,12 +26,29 @@ import { UsereditComponent } from './component/useredit/useredit.component';
 import { UserdetailsComponent } from './component/userdetails/userdetails.component';
 import { PasswordchangeComponent } from './component/passwordchange/passwordchange.component';
 import { ContactpageComponent } from './component/contactpage/contactpage.component';
-import { AuthService } from './services/auth.service';
 import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
+import { AuthService } from './services/auth.service';
 
 
+
+const routes = [
+  { path: 'register', component: RegisterComponent },
+  { path: 'listofpostings', component: ListofpostingsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'organizationcreate', component: OrganizationcreateComponent },
+  { path: 'organizationedit', component: OrganizationeditComponent },
+  { path: 'passwordchange', component: PasswordchangeComponent },
+  { path: 'postingcreate', component: PostingcreateComponent },
+  { path: 'postingdetail', component: PostingdetailComponent },
+  { path: 'postingedit', component: PostingeditComponent },
+
+  { path: 'userdetails', component: UserdetailsComponent },
+  { path: 'useredit', component: UsereditComponent },
+  { path: 'contactpage', component: ContactpageComponent },
+  { path: '**', component: AppComponent }
+];
 
 @NgModule({
   declarations: [
@@ -48,18 +70,25 @@ import { UserService } from './services/user.service';
   ],
   imports: [
     BrowserModule,
+
+    MatToolbarModule,
+    MatButtonModule,
+    FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatInputModule,
+
+    MatFormFieldModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule
-  ],
+
+
   providers: [
     AuthService,
     OrganizationService,
     PostingService,
     UserService
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
