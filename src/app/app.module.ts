@@ -1,5 +1,6 @@
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,10 +9,10 @@ import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, 
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatToolbarModule, MatFormFieldModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-
 import { FooterComponent } from './component/footer/footer.component';
 import { ListofpostingsComponent } from './component/listofpostings/listofpostings.component';
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
@@ -29,6 +30,8 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+
+
 
 const routes = [
   { path: 'register', component: RegisterComponent },
@@ -67,19 +70,25 @@ const routes = [
   ],
   imports: [
     BrowserModule,
+
     MatToolbarModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule,
-    RouterModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-    MatTableModule
+
+    MatFormFieldModule,
+    AppRoutingModule,
+
+
+  providers: [
+    AuthService,
+    OrganizationService,
+    PostingService,
+    UserService
   ],
-  providers: [AuthService, OrganizationService, PostingService, UserService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
