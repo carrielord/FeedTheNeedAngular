@@ -14,9 +14,9 @@ import { ListofpostingsComponent } from './component/listofpostings/listofpostin
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component';
 import { PostingeditComponent } from './component/postingedit/postingedit.component';
-import { OrganizationindexComponent } from './component/organizationindex/organizationindex.component';
-import { OrganizationcreateComponent } from './component/organizationcreate/organizationcreate.component';
-import { OrganizationeditComponent } from './component/organizationedit/organizationedit.component';
+import { OrganizationindexComponent } from './component/organizationindex/organization-index.component';
+import { OrganizationcreateComponent } from './component/organizationcreate/organization-create.component';
+import { OrganizationeditComponent } from './component/organizationedit/organization-edit.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UsereditComponent } from './component/useredit/useredit.component';

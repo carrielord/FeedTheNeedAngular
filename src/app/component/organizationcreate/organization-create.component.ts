@@ -1,13 +1,12 @@
-
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { OrganizationService } from 'src/app/services/organization.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-organizationcreate',
-  templateUrl: './organizationcreate.component.html',
-  styleUrls: ['./organizationcreate.component.css']
+  selector: 'app-organization-create',
+  templateUrl: './organization-create.component.html',
+  styleUrls: ['./organization-create.component.css']
 })
 export class OrganizationcreateComponent implements OnInit {
 

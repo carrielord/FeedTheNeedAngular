@@ -6,8 +6,8 @@ import { Organization } from 'src/app/models/organization';
 
 @Component({
   selector: 'app-notorganizatione-edit',
-  templateUrl: './organizationedit.component.html',
-  styleUrls: ['./organizationedit.component.css']
+  templateUrl: './organization-edit.component.html',
+  styleUrls: ['./organization-edit.component.css']
 })
 export class OrganizationeditComponent implements OnInit {
 
