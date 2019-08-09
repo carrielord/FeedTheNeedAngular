@@ -9,8 +9,6 @@ import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, 
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatFormFieldModule } from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -80,7 +78,7 @@ const routes = [
 
     MatFormFieldModule,
     AppRoutingModule,
-
+  ],
 
   providers: [
     AuthService,
