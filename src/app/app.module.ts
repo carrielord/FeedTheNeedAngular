@@ -80,7 +80,6 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatFormFieldModule,
     AppRoutingModule,
   ],
 
