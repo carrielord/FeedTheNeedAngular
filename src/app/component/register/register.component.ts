@@ -32,6 +32,7 @@ export class RegisterComponent implements OnInit {
     console.log(this._registerForm.value);
     this._authService
     .register(this._registerForm.value)
-    .subscribe(()=>this._authService.login(this._registerForm.value));
+    .subscribe(()=>this._authService.register(this._registerForm.value));
+    
   }
 }

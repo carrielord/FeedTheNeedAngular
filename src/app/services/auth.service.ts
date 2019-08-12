@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Token } from '../models/Token';
 import{Router} from '@angular/router';
 import{Observable, Subject} from 'rxjs';
-const Api_Url = 'https://localhost:4200';
+const Api_Url = 'https://localhost:44381';
 
 @Injectable()
 export class AuthService{
@@ -13,6 +13,7 @@ userInfo: Token;
 isLoggedIn = new Subject<boolean>();
 
   constructor(private _http: HttpClient, private _router: Router){}
+  
   register(regUserData: RegisterUser){
     return this._http.post(`${Api_Url}/api/Account/Register`, regUserData);
 
