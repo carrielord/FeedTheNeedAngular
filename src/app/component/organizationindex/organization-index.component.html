@@ -1,0 +1,45 @@
+<h1>Index</h1>
+<a mat-raised-button color="primary" routerLink="/organizations/create">Create New</a>
+<hr>
+
+<div>
+    <mat-table #table [dataSource]="dataSource">
+        <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+        
+        <ng-container matColumnDef="details">
+            <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+            <mat-cell *matCellDef="let organization" routerLink="/organizations/detail/{{organization.OrganizationID}}">
+                <i class="material-icons">library_books</i>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="OrganizationID">
+            <mat-header-cell *matHeaderCellDef> Organization # </mat-header-cell>
+            <mat-cell *matCellDef="let organization"> {{organization.OrganizationID}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="OrganizationName">
+            <mat-header-cell *matHeaderCellDef> OrganizationName </mat-header-cell>
+            <mat-cell *matCellDef="let organization"> {{organization.OrganizationName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="OrganizationLink">
+            <mat-header-cell *matHeaderCellDef> OrganizationLink </mat-header-cell>
+            <mat-cell *matCellDef="let organization"> {{organization.OrganizationLink}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="OrganizationBio">
+            <mat-header-cell *matHeaderCellDef> OrganizationBio </mat-header-cell>
+            <mat-cell *matCellDef="let organization"> {{organization.OrganizationBio}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="buttons">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let organization"> 
+                <i mat-icon class="material-icons" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</i>
+                <i class="material-icons" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</i>
+            </mat-cell>
+        </ng-container>
+    </mat-table>
+</div>
