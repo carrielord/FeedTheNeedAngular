@@ -28,8 +28,6 @@ import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 
-
-
 const routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'listofpostings', component: ListofpostingsComponent },
@@ -41,12 +39,8 @@ const routes = [
   { path: 'postingcreate', component: PostingcreateComponent },
   { path: 'postingdetail', component: PostingdetailComponent },
   { path: 'postingedit', component: PostingeditComponent },
+]
 
-  { path: 'userdetails', component: UserdetailsComponent },
-  { path: 'useredit', component: UsereditComponent },
-  { path: 'contactpage', component: ContactpageComponent },
-  { path: '**', component: AppComponent }
-];
 
 @NgModule({
   declarations: [
@@ -80,7 +74,7 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
 
   providers: [
