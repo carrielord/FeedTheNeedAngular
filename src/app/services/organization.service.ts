@@ -10,7 +10,7 @@ const ApiUrl = 'https://feedtheneedwebapi20190807040544.azurewebsites.net/';
 
 export class OrganizationService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient ) { }
 
   getOrganization(id: string) {
     return this._http.get(`${ApiUrl}/Organization/${id}`, { headers: this.getHeaders() });

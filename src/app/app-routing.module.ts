@@ -17,7 +17,7 @@ import { OrganizationindexComponent } from './component/organizationindex/organi
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
   { path: 'register', component: RegisterComponent },
   { path: 'listofpostings', component: ListofpostingsComponent },
   { path: 'login', component: LoginComponent },
@@ -37,15 +37,13 @@ const routes: Routes = [
 
   { path: 'userdetails', component: UserdetailsComponent },
   { path: 'useredit', component: UsereditComponent },
+
   { path: 'contactpage', component: ContactpageComponent },
   // { path: '**', component: AppComponent }
 ];
 
 @NgModule({
-
-
   // other imports here
-
   imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
