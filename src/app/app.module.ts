@@ -31,22 +31,7 @@ import { AuthService } from './services/auth.service';
 
 
 
-const routes = [
-  { path: 'register', component: RegisterComponent },
-  { path: 'listofpostings', component: ListofpostingsComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'organizationcreate', component: OrganizationcreateComponent },
-  { path: 'organizationedit', component: OrganizationeditComponent },
-  { path: 'passwordchange', component: PasswordchangeComponent },
-  { path: 'postingcreate', component: PostingcreateComponent },
-  { path: 'postingdetail', component: PostingdetailComponent },
-  { path: 'postingedit', component: PostingeditComponent },
 
-  { path: 'userdetails', component: UserdetailsComponent },
-  { path: 'useredit', component: UsereditComponent },
-  { path: 'contactpage', component: ContactpageComponent },
-  { path: '**', component: AppComponent }
-];
 
 @NgModule({
   declarations: [
@@ -75,9 +60,10 @@ const routes = [
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-
+    BrowserAnimationsModule,
     MatFormFieldModule,
-    AppRoutingModule,
+    AppRoutingModule, 
+    HttpClientModule
   ],
 
   providers: [
