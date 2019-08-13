@@ -7,7 +7,7 @@ import { UserService } from 'src/app/services/user.service';
  templateUrl: './userdetails.component.html',
  styleUrls: ['./userdetails.component.css']
 })
-export class userdetailsComponent implements OnInit {
+export class UserdetailsComponent implements OnInit {
 user: User;
  constructor(private _activatedRoute: ActivatedRoute, private _userService: UserService, ) { }
  ngOnInit() {

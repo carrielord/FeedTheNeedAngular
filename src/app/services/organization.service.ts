@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Organization } from '../models/Organization';
 
-const ApiUrl = 'https://feedtheneedwebapi20190807040544.azurewebsites.net/';
+const ApiUrl = 'https://feedtheneed.azurewebsites.net';
 
 @Injectable({
   providedIn: 'root'
