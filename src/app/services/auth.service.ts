@@ -24,7 +24,7 @@ isLoggedIn = new Subject<boolean>();
 
     return this._http.post(`${Api_Url}/Token`, str).subscribe((token: Token)=>{
       localStorage.setItem('id_token', token.access_token);
-      this._router.navigate(['/login']);
+      this._router.navigate(['/userdetails']);
     });
   }
   currentUser(): Observable<Object>{
