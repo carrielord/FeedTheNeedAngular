@@ -1,1 +1,28 @@
-<p>userdetails works!</p>
+<h1>Details</h1>
+<hr>
+   <div>
+       <label for="user">first name:</label>
+       <span>
+           {{user.FirstName}}
+       </span>
+   </div>
+   <div>
+       <label for="user">last name:</label>
+       <span>
+           {{user.LastName}}
+       </span>
+   </div>
+   <div>
+       <label for="user">email:</label>
+       <span>
+           {{user.Email}}
+       </span>
+   </div>
+   <div>
+       <label for="user">phone number:</label>
+       <span>
+           {{user.Phonenumber}}
+       </span>
+   </div>
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/userdetails">Back to List</button>
