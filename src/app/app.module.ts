@@ -27,6 +27,7 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component';
 
 const routes = [
   { path: 'register', component: RegisterComponent },
@@ -61,6 +62,7 @@ const routes = [
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
+    PostingdeleteComponent,
   ],
   imports: [
     BrowserModule,

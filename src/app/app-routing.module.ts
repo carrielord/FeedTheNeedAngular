@@ -8,6 +8,7 @@ import { PasswordchangeComponent } from './component/passwordchange/passwordchan
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component'
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component'
 import { PostingeditComponent } from './component/postingedit/postingedit.component'
+import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component'
 import { RegisterComponent } from './component/register/register.component'
 import { UserdetailsComponent } from './component/userdetails/userdetails.component'
 import { UsereditComponent } from './component/useredit/useredit.component'
@@ -19,8 +20,15 @@ import { OrganizationindexComponent } from './component/organizationindex/organi
 const routes: Routes = [
   
   { path: 'register', component: RegisterComponent },
-  { path: 'listofpostings', component: ListofpostingsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'posting', children: [
+    { path: 'list', component: ListofpostingsComponent },
+    { path: 'create', component: PostingcreateComponent },
+    { path: 'detail', component: PostingdetailComponent },
+    { path: 'update', component: PostingeditComponent },
+    { path: 'delete', component: PostingdeleteComponent },
+  ]
+},
   { 
     path: 'organizations', children: [
       { path: '', component: OrganizationindexComponent },

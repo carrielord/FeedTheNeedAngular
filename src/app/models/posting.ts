@@ -1,4 +1,4 @@
-export interface PostingCreate {
+export interface Posting {
     postID?: number;	
     userID?: string;	
     title:	string;	

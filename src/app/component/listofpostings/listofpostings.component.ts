@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostingService } from 'src/app/services/posting.service';
-import { PostingCreate } from 'src/app/models/postingcreate';
+import { Posting } from 'src/app/models/posting';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
@@ -14,11 +14,11 @@ export class ListofpostingsComponent implements OnInit {
   
   columnNames = ['Title:', 'State:', 'Available Until:']
 
-  dataSource: MatTableDataSource<PostingCreate>
+  dataSource: MatTableDataSource<Posting>
 
   ngOnInit() {
-    this._postingService.getPostList().subscribe((postings: PostingCreate[]) => {
-      this.dataSource = new MatTableDataSource<PostingCreate>(postings);
+    this._postingService.getPostList().subscribe((postings: Posting[]) => {
+      this.dataSource = new MatTableDataSource<Posting>(postings);
     });
   }
 

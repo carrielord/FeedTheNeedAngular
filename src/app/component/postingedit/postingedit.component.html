@@ -1,1 +1,56 @@
-<p>postingedit works!</p>
+<H1>Edit a Feed Post</H1>
+
+<hr/>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+    <div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Title" formControlName="Title" type="Title" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Details" formControlName="Details" type="Details" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Address" formControlName="Address" type="Address" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="City" formControlName="City" type="City" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="State" formControlName="State" type="State" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Organization" formControlName="Organization" type="Organization" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Category" formControlName="Category" type="Category" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Available Until" formControlName="Available Until" type="date" required [value]/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Is Completed?" formControlName="Is Completed" type="bool" required [value]/>
+            </mat-form-field>
+        </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Feed Post</button>
+</form>
+
+<a mat-button routerLink="/posting/list">Back to Feed</a>
