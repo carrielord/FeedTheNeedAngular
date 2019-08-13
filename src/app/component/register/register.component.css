@@ -1,0 +1,32 @@
+.nav-btn {
+    margin-right: 0.5em;
+    background-color: #008888;
+    color: #ffffff;
+    box-shadow: #005555;
+}
+
+.nav-btn:hover{
+    margin-right: 0.5em;
+    background-color: #006666;
+    color: #ffffff;
+}
+
+.registermargin {    
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.registercomponent {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 0%;
+    padding-right: 0%;
+    z-index: 0; 
+    border-color: #002A6D;
+    border-style: solid;
+    border-width: 4px;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 5%;
+}
