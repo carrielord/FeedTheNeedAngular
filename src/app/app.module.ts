@@ -39,7 +39,7 @@ const routes = [
   { path: 'postingcreate', component: PostingcreateComponent },
   { path: 'postingdetail', component: PostingdetailComponent },
   { path: 'postingedit', component: PostingeditComponent },
-
+]
 
 @NgModule({
   declarations: [

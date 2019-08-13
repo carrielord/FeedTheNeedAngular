@@ -1,6 +1,6 @@
 export interface PostingEdit {
-    postID: number;	
-    userID: string;	
+    postID?: number;	
+    userID?: string;	
     title:	string;	
     details: string;	
     address: string;	
@@ -8,7 +8,7 @@ export interface PostingEdit {
     state: string;	
     nameOfProvider:	string;	
     category: string;	
-    datePosted: string;	
+    datePosted?: string;	
     dateAvailable: Date;	
-    isCompleted: boolean;
+    isCompleted?: boolean;
 }
