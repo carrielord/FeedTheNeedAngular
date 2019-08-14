@@ -17,6 +17,8 @@ import { PostingeditComponent } from './component/postingedit/postingedit.compon
 import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
 import { OrganizationcreateComponent } from './component/organization/organization-create/organization-create.component';
 import { OrganizationeditComponent } from './component/organization/organization-edit/organization-edit.component';
+import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
+import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UsereditComponent } from './component/useredit/useredit.component';
@@ -27,7 +29,6 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
-import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
 
 const routes = [
   { path: 'register', component: RegisterComponent },
@@ -64,6 +65,7 @@ const routes = [
     ContactpageComponent,
     HeaderComponent,
     OrganizationDetailsComponent,
+    OrganizationdeleteComponent,
   ],
   imports: [
     BrowserModule,

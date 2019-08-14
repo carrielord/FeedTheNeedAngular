@@ -14,6 +14,7 @@ import { UsereditComponent } from './component/useredit/useredit.component'
 import { ContactpageComponent } from './component/contactpage/contactpage.component'
 import { NgModule } from '@angular/core';
 import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
+import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,7 @@ const routes: Routes = [
       { path: 'create', component: OrganizationcreateComponent },
       { path: 'detail/:id', component: OrganizationindexComponent },
       { path: 'edit/:id', component: OrganizationeditComponent },
-      { path: 'delete/:id', component: OrganizationindexComponent }
+      { path: 'delete/:id', component: OrganizationdeleteComponent }
     ]
   },
   { path: 'passwordchange', component: PasswordchangeComponent },
