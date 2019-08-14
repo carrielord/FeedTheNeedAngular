@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { PostingService } from 'src/app/services/posting.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-postingcreate',
@@ -11,7 +12,7 @@ export class PostingcreateComponent implements OnInit {
 
   private _postingForm: FormGroup;
 
-  constructor(private _form: FormBuilder, private _postingService: PostingService) { 
+  constructor(private _form: FormBuilder, private _postingService: PostingService, private _router: Router) { 
     this.createForm();
   }
 
@@ -33,7 +34,9 @@ createForm(){
 
 onSubmit(){
   console.log(this._postingForm.value);
-  this._postingService.createPost(this._postingForm.value).subscribe( () => console.log('you did it!'));
+  this._postingService.createPost(this._postingForm.value).subscribe(data => {
+    this._router.navigate(['/posting/list']);
+  });
 }
 
 }

@@ -21,12 +21,13 @@ const routes: Routes = [
   
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+
   { path: 'posting', children: [
     { path: 'list', component: ListofpostingsComponent },
     { path: 'create', component: PostingcreateComponent },
-    { path: 'detail', component: PostingdetailComponent },
-    { path: 'update', component: PostingeditComponent },
-    { path: 'delete', component: PostingdeleteComponent },
+    { path: 'detail/:id', component: PostingdetailComponent },
+    { path: 'edit/:id', component: PostingeditComponent },
+    { path: 'delete/:id', component: PostingdeleteComponent },
   ]
 },
   { 

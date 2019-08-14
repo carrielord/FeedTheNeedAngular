@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { PostingService } from 'src/app/services/posting.service';
 import { Posting } from 'src/app/models/posting';
 import { format } from 'util';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-postingedit',
@@ -14,8 +15,13 @@ export class PostingeditComponent implements OnInit {
   posting: Posting;
   private _postingEditForm: FormGroup;
 
-  constructor(private _form: FormBuilder, private _PostingService: PostingService ) {
-    this.editForm();
+  constructor(private _form: FormBuilder, private _postingService: PostingService, private _activatedRoute: ActivatedRoute, private _router: Router ) {
+    this._activatedRoute.paramMap.subscribe(p => {
+      this._postingService.getPostDetail(p.get('id')).subscribe((singlePost: Posting) =>{
+        this.posting = singlePost;
+        this.editForm();
+      });
+    });
    }
 
   ngOnInit() {
@@ -36,21 +42,23 @@ export class PostingeditComponent implements OnInit {
   });
   }
 
-  onSubmit(_form){
+  onSubmit(form){
     const updatePost: Posting = {
-      title: _form.value.title,
-      details: _form.value.details,
-      address: _form.value.address,
-      city: _form.value.city,
-      state: _form.value.state,
-      nameOfProvider:	_form.value.nameOfProvider,
-      category: _form.value.category,
-      dateAvailable: _form.value.dateAvailable,
-      isCompleted: _form.value.isCompleted
+      title: form.value.title,
+      details: form.value.details,
+      address: form.value.address,
+      city: form.value.city,
+      state: form.value.state,
+      nameOfProvider:	form.value.nameOfProvider,
+      category: form.value.category,
+      dateAvailable: form.value.dateAvailable,
+      isCompleted: form.value.isCompleted
     };
 
     console.log(this._postingEditForm.value);
-    this._PostingService.updatePost(this._postingEditForm.value).subscribe( () => console.log('you did it!'));
+    this._postingService.updatePost(updatePost).subscribe(d => {
+      this._router.navigate(['/posting/list'])
+    });
   }
 
 }
