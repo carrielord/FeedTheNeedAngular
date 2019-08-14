@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Organization } from '../models/Organization';
 
-const ApiUrl = 'https://feedtheneedwebapi20190807040544.azurewebsites.net/';
+const ApiUrl = 'https://feedtheneedwebapi.azurewebsites.net';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,10 @@ export class OrganizationService {
 
   getOrganization(id: string) {
     return this._http.get(`${ApiUrl}/Organization/${id}`, { headers: this.getHeaders() });
+  }
+
+  getOrganizations() {
+    return this._http.get(`${ApiUrl}/Organization`, { headers: this.getHeaders() });
   }
 
   createOrganization(organization: Organization) {

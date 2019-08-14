@@ -7,7 +7,7 @@
         <div>
             <div hidden>
                 <mat-form-field>
-                    <input matInput placeholder="OrganizationID" formControlName="OrganizationID" Type="OrganizationID" required [value]="organization.OrganizationName" />
+                    <input matInput placeholder="OrganizationID" formControlName="OrganizationID" Type="OrganizationID" required [value]="organization.OrganizationID" />
                 </mat-form-field>
             </div>
 
@@ -19,7 +19,7 @@
 
             <div>
                 <mat-form-field>
-                    <input matInput placeholder="OrganizationLink" formControlName="OrganizationLink" type="OrganizationLink" required [value]="organization.OrganizationName" />
+                    <input matInput placeholder="OrganizationLink" formControlName="OrganizationLink" type="OrganizationLink" required [value]="organization.OrganizationLink" />
                 </mat-form-field>
             </div>
 
@@ -34,4 +34,4 @@
     </form>
 </div>
 
-<a mat-button routerLink="/Organizations">Back to List</a>
+<a mat-button routerLink="/organizations">Back to List</a>

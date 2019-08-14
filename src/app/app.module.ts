@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,9 +14,9 @@ import { ListofpostingsComponent } from './component/listofpostings/listofpostin
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component';
 import { PostingeditComponent } from './component/postingedit/postingedit.component';
-import { OrganizationindexComponent } from './component/organizationindex/organization-index.component';
-import { OrganizationcreateComponent } from './component/organizationcreate/organization-create.component';
-import { OrganizationeditComponent } from './component/organizationedit/organization-edit.component';
+import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
+import { OrganizationcreateComponent } from './component/organization/organization-create/organization-create.component';
+import { OrganizationeditComponent } from './component/organization/organization-edit/organization-edit.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UsereditComponent } from './component/useredit/useredit.component';
@@ -27,6 +27,7 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
 
 const routes = [
   { path: 'register', component: RegisterComponent },
@@ -62,6 +63,7 @@ const routes = [
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
+    OrganizationDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +76,8 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatCardModule,
+    MatGridListModule,
     MatFormFieldModule,
     AppRoutingModule,
   ],
