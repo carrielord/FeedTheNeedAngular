@@ -29,7 +29,7 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
-import { UserdeleteComponent } from './userdelete/userdelete.component';
+import { UserDeleteComponent } from './component/userdelete/userdelete.component';
 
 
 
@@ -54,7 +54,7 @@ import { UserdeleteComponent } from './userdelete/userdelete.component';
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
-    UserdeleteComponent,
+    UserDeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
   ],
