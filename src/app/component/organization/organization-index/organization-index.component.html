@@ -1,7 +1,6 @@
-<h1>Index</h1>
-<a mat-raised-button color="primary" routerLink="/organizations/create">Create New</a>
-<hr>
-
+<div class="organizationMargin">
+        <div class="organizationComponent">
+<h1>Organization</h1>
 <div>
     <mat-table #table [dataSource]="dataSource">
         <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
@@ -36,10 +35,16 @@
 
         <ng-container matColumnDef="buttons">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-            <mat-cell *matCellDef="let organization"> 
-                <i mat-icon class="material-icons" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</i>
-                <i class="material-icons" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</i>
+            <mat-cell *matCellDef="let organization">
+
+                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</a>
+                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/detail/{{organization.OrganizationID}}">detail</a>
+                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</a>
             </mat-cell>
         </ng-container>
     </mat-table>
+    <br>
+    <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/create">Create New</a>
+</div>
+</div>
 </div>

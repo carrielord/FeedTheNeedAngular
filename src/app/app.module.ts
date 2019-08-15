@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule} from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,9 +14,11 @@ import { ListofpostingsComponent } from './component/listofpostings/listofpostin
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component';
 import { PostingeditComponent } from './component/postingedit/postingedit.component';
-import { OrganizationindexComponent } from './component/organizationindex/organization-index.component';
-import { OrganizationcreateComponent } from './component/organizationcreate/organization-create.component';
-import { OrganizationeditComponent } from './component/organizationedit/organization-edit.component';
+import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
+import { OrganizationcreateComponent } from './component/organization/organization-create/organization-create.component';
+import { OrganizationeditComponent } from './component/organization/organization-edit/organization-edit.component';
+import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
+import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UserEditComponent } from './component/useredit/useredit.component';
@@ -52,7 +54,9 @@ import { UserdeleteComponent } from './userdelete/userdelete.component';
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
-    UserdeleteComponent
+    UserdeleteComponent,
+    OrganizationDetailsComponent,
+    OrganizationdeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,8 @@ import { UserdeleteComponent } from './userdelete/userdelete.component';
     MatTableModule,
     MatCardModule,
     MatGridListModule,
-    AppRoutingModule
+    MatFormFieldModule,
+    AppRoutingModule,
   ],
 
   providers: [
