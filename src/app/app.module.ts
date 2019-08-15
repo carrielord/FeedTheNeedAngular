@@ -27,6 +27,7 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { UserdeleteComponent } from './userdelete/userdelete.component';
 
 
 
@@ -50,7 +51,8 @@ import { AuthService } from './services/auth.service';
     UserdetailsComponent,
     PasswordchangeComponent,
     ContactpageComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserdeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+<h1>Delete</h1>
+<h4>Are you sure you want to delete this?</h4>
+
+<hr>
+<div *ngIf="user">
+    <div>
+        <label for="">UserID</label>
+        <span>{{user.UserID}}</span>
+    </div>
+    <div>
+        <label for="">Title</label>
+        <span>{{user.Title}}</span>
+    </div>
+    <div>
+        <label for="">Content</label>
+        <span>{{user.Content}}</span>
+    </div>
+    <div>
+        <label for="">CreateUtc</label>
+        <span>{{user.CreateUtc}}</span>
+    </div>
+    <div>
+        <label for="">ModifiedUtc</label>
+        <span>{{user.ModifiedUtc}}</span>
+    </div>
+</div>
+
+<button mat-button color="warn" (click)="onDelete()">Delete</button>
+<button mat-button color="primary" routerLink="/users">Back to list</button>
