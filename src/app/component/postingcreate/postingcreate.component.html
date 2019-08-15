@@ -1,1 +1,51 @@
-<p>postingcreate works!</p>
+<H1>Create a Feed Post</H1>
+
+<hr/>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="postingForm">
+    <div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Title" formControlName="title" type="Title" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Details" formControlName="details" type="Details" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Address" formControlName="address" type="Address" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="City" formControlName="city" type="City" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="State" formControlName="state" type="State" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Organization" formControlName="nameOfProvider" type="Organization" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Category" formControlName="category" type="Category" required/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Available Until" formControlName="dateAvailable" type="date" required/>
+            </mat-form-field>
+        </div>
+    </div>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Feed Post</button>
+</form>
+
+<a mat-button routerLink="/posting/list">Back to Feed</a>
