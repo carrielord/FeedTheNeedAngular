@@ -5,9 +5,9 @@
 <div>
     <mat-table #table [dataSource]="dataSource">
         <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-        <mat-row *matRowDef="let row; column: columnNames;"></mat-row>
+        <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-        <ng-container MatColumnDef="details">
+        <ng-container matColumnDef="details">
             <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
             <mat-cell *matCellDef="let posting" routerLink="/posting/detail/{{posting.PostID}}"> <i class="material-icons">library_books</i></mat-cell>
         </ng-container>
@@ -17,52 +17,17 @@
             <mat-cell *matCellDef="let posting"> {{posting.Title}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Details">
-            <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.Details}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="Address">
-            <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.Address}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="City">
-            <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.City}} </mat-cell>
-        </ng-container>
-
         <ng-container matColumnDef="State">
             <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
             <mat-cell *matCellDef="let posting"> {{posting.State}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Name of Provider">
-            <mat-header-cell *matHeaderCellDef> Organization </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.NameOfProvider}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="Category">
-            <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.Category}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="Date Posted">
-            <mat-header-cell *matHeaderCellDef> Date Posted </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.DatePosted | date: 'fullDate'}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="Is Available Until">
+        <ng-container matColumnDef="Available Until">
             <mat-header-cell *matHeaderCellDef> Available Until </mat-header-cell>
             <mat-cell *matCellDef="let posting"> {{posting.DateAvaiableUntil | date: 'fullDate'}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="Is Completed?">
-            <mat-header-cell *matHeaderCellDef> Is Completed </mat-header-cell>
-            <mat-cell *matCellDef="let posting"> {{posting.IsCompleted}} </mat-cell>
-        </ng-container>
-
-        <ng-container MatColumnDef="buttons">
+        <ng-container matColumnDef="buttons">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let posting">
                 <i mat-icon class="material-icons" routerLink="/posting/edit/{{posting.PostID}}">edit</i> 

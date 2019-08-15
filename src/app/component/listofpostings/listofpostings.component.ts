@@ -9,13 +9,13 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./listofpostings.component.css']
 })
 export class ListofpostingsComponent implements OnInit {
-
+  
+  columnNames = ['details', 'Title', 'State', 'Available Until', 'buttons']
+  
+  dataSource: MatTableDataSource<Posting>
+  
   constructor(private _postingService: PostingService) { }
   
-  columnNames = ['Title:', 'State:', 'Available Until:']
-
-  dataSource: MatTableDataSource<Posting>
-
   ngOnInit() {
     this._postingService.getPostList().subscribe((postings: Posting[]) => {
       this.dataSource = new MatTableDataSource<Posting>(postings);

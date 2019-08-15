@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PostingcreateComponent implements OnInit {
 
-  private _postingForm: FormGroup;
+  postingForm: FormGroup;
 
   constructor(private _form: FormBuilder, private _postingService: PostingService, private _router: Router) { 
     this.createForm();
@@ -20,7 +20,7 @@ export class PostingcreateComponent implements OnInit {
   }
 
 createForm(){
-  this._postingForm = this._form.group({	
+  this.postingForm = this._form.group({	
     title: new FormControl,
     details: new FormControl,
     address: new FormControl,	
@@ -33,8 +33,8 @@ createForm(){
 }
 
 onSubmit(){
-  console.log(this._postingForm.value);
-  this._postingService.createPost(this._postingForm.value).subscribe(data => {
+  console.log(this.postingForm.value);
+  this._postingService.createPost(this.postingForm.value).subscribe(data => {
     this._router.navigate(['/posting/list']);
   });
 }

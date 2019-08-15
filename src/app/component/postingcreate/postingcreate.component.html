@@ -2,46 +2,46 @@
 
 <hr/>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="noteForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="postingForm">
     <div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Title" formControlName="Title" type="Title" required/>
+                <input matInput placeholder="Title" formControlName="title" type="Title" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Details" formControlName="Details" type="Details" required/>
+                <input matInput placeholder="Details" formControlName="details" type="Details" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Address" formControlName="Address" type="Address" required/>
+                <input matInput placeholder="Address" formControlName="address" type="Address" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="City" formControlName="City" type="City" required/>
+                <input matInput placeholder="City" formControlName="city" type="City" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="State" formControlName="State" type="State" required/>
+                <input matInput placeholder="State" formControlName="state" type="State" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Organization" formControlName="Organization" type="Organization" required/>
+                <input matInput placeholder="Organization" formControlName="nameOfProvider" type="Organization" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Category" formControlName="Category" type="Category" required/>
+                <input matInput placeholder="Category" formControlName="category" type="Category" required/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Available Until" formControlName="Available Until" type="date" required/>
+                <input matInput placeholder="Available Until" formControlName="dateAvailable" type="date" required/>
             </mat-form-field>
         </div>
     </div>
