@@ -15,6 +15,7 @@ import { ContactpageComponent } from './component/contactpage/contactpage.compon
 import { NgModule } from '@angular/core';
 import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
 import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
+import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,7 @@ const routes: Routes = [
     path: 'organizations', children: [
       { path: '', component: OrganizationindexComponent },
       { path: 'create', component: OrganizationcreateComponent },
-      { path: 'detail/:id', component: OrganizationindexComponent },
+      { path: 'detail/:id', component: OrganizationDetailsComponent },
       { path: 'edit/:id', component: OrganizationeditComponent },
       { path: 'delete/:id', component: OrganizationdeleteComponent }
     ]

@@ -1,3 +1,5 @@
+<div class="organizationMargin">
+        <div class="organizationComponent">
 <h1>Organization</h1>
 <div>
     <mat-table #table [dataSource]="dataSource">
@@ -36,10 +38,13 @@
             <mat-cell *matCellDef="let organization">
 
                 <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</a>
+                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/detail/{{organization.OrganizationID}}">detail</a>
                 <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</a>
             </mat-cell>
         </ng-container>
     </mat-table>
     <br>
     <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/create">Create New</a>
+</div>
+</div>
 </div>
