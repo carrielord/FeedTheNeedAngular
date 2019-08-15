@@ -10,7 +10,7 @@ import { PostingdetailComponent } from './component/postingdetail/postingdetail.
 import { PostingeditComponent } from './component/postingedit/postingedit.component'
 import { RegisterComponent } from './component/register/register.component'
 import { UserdetailsComponent } from './component/userdetails/userdetails.component'
-import { UsereditComponent } from './component/useredit/useredit.component'
+import { UserEditComponent } from './component/useredit/useredit.component'
 import { ContactpageComponent } from './component/contactpage/contactpage.component'
 import { NgModule } from '@angular/core';
 import { OrganizationindexComponent } from './component/organizationindex/organization-index.component';
@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'postingedit', component: PostingeditComponent },
 
   { path: 'userdetails', component: UserdetailsComponent },
-  { path: 'useredit', component: UsereditComponent },
+  { path: 'useredit', component: UserEditComponent },
 
   { path: 'contactpage', component: ContactpageComponent },
   // { path: '**', component: AppComponent }

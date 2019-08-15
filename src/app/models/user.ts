@@ -3,5 +3,4 @@ export interface User{
     LastName: string;
     Email: string;
     PhoneNumber: string;
-    UserID: string;
     }

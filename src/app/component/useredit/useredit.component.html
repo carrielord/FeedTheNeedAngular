@@ -1,1 +1,40 @@
-<p>useredit works!</p>
+
+<div class="registermargin">
+    <div class="registercomponent">
+<h1>Edit your info</h1>
+
+<hr>
+<!--  firstName: new FormControl,
+ lastName: new FormControl,
+ phoneNumber: new FormControl -->
+<form #f = "ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editUserForm">
+<div>
+   <div>
+       <mat-form-field>
+           <input matInput placeholder="Email" formControlName="Email" type="email"  [value] = "user.Email" />
+       </mat-form-field>
+   </div>
+   <div>
+       <mat-form-field>
+           <input matInput placeholder="First Name" formControlName="FirstName" type="text" required [value] = "user.FirstName" />
+       </mat-form-field>
+   </div>
+   <div>
+       <mat-form-field>
+           <input matInput placeholder="Last Name" formControlName="LastName" type="text"
+           required [value] = "user.LastName" />
+       </mat-form-field>
+   </div>
+   <div>
+       <mat-form-field>
+           <input matInput placeholder="Phone Number" formControlName="PhoneNumber" type="tel" required [value] = "user.PhoneNumber" />
+       </mat-form-field>
+   </div>
+   
+</div>
+<button mat-raised-button class="nav-btn" color="primary" type="submit">Save changes</button>
+</form>
+<br>
+<button mat-raised-button class="nav-btn" color="primary" routerLink="/login" type = "button">Login as an existing user</button>
+</div>
+</div>
