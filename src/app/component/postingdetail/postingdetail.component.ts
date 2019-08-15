@@ -3,6 +3,7 @@ import { PostingService } from 'src/app/services/posting.service';
 import { MatTableDataSource } from '@angular/material';
 import { Posting } from 'src/app/models/posting';
 import { ActivatedRoute } from '@angular/router';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-postingdetail',
@@ -12,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PostingdetailComponent implements OnInit {
 
   posting: Posting;
+  user: User;
 
   constructor(private _postingService: PostingService, private _activatedRoute: ActivatedRoute) { }
 

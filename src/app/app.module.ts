@@ -31,6 +31,7 @@ import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component';
 import { UserDeleteComponent } from './component/userdelete/userdelete.component';
+import { PersonalizedlistofpostingsComponent } from './component/personalizedlistofpostings/personalizedlistofpostings.component';
 
 
 
@@ -58,6 +59,7 @@ import { UserDeleteComponent } from './component/userdelete/userdelete.component
     UserDeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
+    PersonalizedlistofpostingsComponent,
   ],
   imports: [
     BrowserModule,

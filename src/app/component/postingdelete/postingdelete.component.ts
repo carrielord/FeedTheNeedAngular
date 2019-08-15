@@ -24,7 +24,7 @@ export class PostingdeleteComponent implements OnInit {
   }
 
   onDelete(){
-    this._postingService.deletePost(this.posting.postID).subscribe(() => {
+    this._postingService.deletePost(this.posting.PostID).subscribe(() => {
       this._router.navigate(['/posting/list'])
     });
   }
