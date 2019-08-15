@@ -2,60 +2,60 @@
 
 <hr/>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)"  [formGroup]="postingEditForm">
+<form *ngIf="posting" #f="ngForm" (ngSubmit)="onSubmit(f)"  [formGroup]="postingEditForm">
     <div>
         <div hidden>
             <mat-form-field>
-                <input matInput placeholder="PostId" formControlName="postID" type="PostID" required [value]= "posting.PostID"/>
+                <input matInput placeholder="PostId" formControlName="PostID" type="PostID" [value]="posting.PostID"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Title" formControlName="title" type="Title" required [value]= "posting.Title"/>
+                <input matInput placeholder="Title" formControlName="Title" type="Title" [value]="posting.Title"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Details" formControlName="details" type="Details" required [value]="posting.Details"/>
+                <input matInput placeholder="Details" formControlName="Details" type="Details" [value]="posting.Details"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Address" formControlName="address" type="Address" required [value]="posting.Address"/>
+                <input matInput placeholder="Address" formControlName="Address" type="Address" [value]="posting.Address"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="City" formControlName="city" type="City" required [value]="posting.City"/>
+                <input matInput placeholder="City" formControlName="City" type="City" [value]="posting.City"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="State" formControlName="state" type="State" required [value]="posting.State"/>
+                <input matInput placeholder="State" formControlName="State" type="State" [value]="posting.State"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Organization" formControlName="nameOfProvider" type="Organization" required [value]="posting.NameOfProvider"/>
+                <input matInput placeholder="Organization" formControlName="NameOfProvider" type="Organization" [value]="posting.NameOfProvider"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Category" formControlName="category" type="Category" required [value]="posting.Category"/>
+                <input matInput placeholder="Category" formControlName="Category" type="Category" [value]="posting.Category"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Available Until" formControlName="dateAvailable" type="date" required [value]="posting.DateAvailable"/>
+                <input matInput placeholder="Available Until" formControlName="DateAvailable" type="date" [value]="posting.DateAvailable"/>
             </mat-form-field>
         </div>
         <div>
             <mat-form-field>
-                <input matInput placeholder="Is Completed?" formControlName="isCompleted" type="bool" required [value]="posting.IsCompleted"/>
+                <input matInput placeholder="Is Completed?" formControlName="IsCompleted" type="bool" [value]="posting.IsCompleted"/>
             </mat-form-field>
         </div>
     </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Edit Feed Post</button>
+    <button mat-raised-button class="nav-btn" color="primary" type="submit" >Edit Feed Post</button>
 </form>
 
 <a mat-button routerLink="/posting/list">Back to Feed</a>

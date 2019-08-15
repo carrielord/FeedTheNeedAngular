@@ -26,7 +26,6 @@ export class PostingService {
   deletePost(id: number){
     return this._http.delete(`${Api_Url}/Posting/${id}`, { headers: this.getHeaders() });
   }
-  
   getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
   }

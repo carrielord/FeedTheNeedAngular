@@ -14,45 +14,47 @@ export class PostingeditComponent implements OnInit {
   posting: Posting;
   postingEditForm: FormGroup;
 
-  constructor(private _form: FormBuilder, private _postingService: PostingService, private _activatedRoute: ActivatedRoute, private _router: Router ) {
+  constructor(private _form: FormBuilder, private _postingService: PostingService, private _activatedRoute: ActivatedRoute, private _router: Router) {
     this._activatedRoute.paramMap.subscribe(p => {
-      this._postingService.getPostDetail(p.get('id')).subscribe((singlePost: Posting) =>{
+      this._postingService.getPostDetail(p.get('id')).subscribe((singlePost: Posting) => {
         this.posting = singlePost;
-        this.editForm();
+        console.table(this.posting);
+        this.createForm();
       });
     });
-   }
+  }
 
   ngOnInit() {
+
   }
 
-
-  editForm(){
-    this.postingEditForm = this._form.group({	
-      postID: new FormControl(this.posting.postID),
-      title: new FormControl(this.posting.title),
-      details: new FormControl(this.posting.details),
-      address: new FormControl(this.posting.address),	
-      city: new FormControl(this.posting.city),
-      state: new FormControl(this.posting.state),
-      nameOfProvider:	new FormControl(this.posting.nameOfProvider),
-      category: new FormControl(this.posting.category),
-      dateAvailable: new FormControl(this.posting.dateAvailable),
-      isCompleted: new FormControl(this.posting.isCompleted)
-  });
+  createForm() {
+    this.postingEditForm = this._form.group({
+      PostID: new FormControl(this.posting.PostID),
+      Title: new FormControl(this.posting.Title),
+      Details: new FormControl(this.posting.Details),
+      Address: new FormControl(this.posting.Address),
+      City: new FormControl(this.posting.City),
+      State: new FormControl(this.posting.State),
+      NameOfProvider: new FormControl(this.posting.NameOfProvider),
+      Category: new FormControl(this.posting.Category),
+      DateAvailable: new FormControl(this.posting.DateAvailable),
+      IsCompleted: new FormControl(this.posting.IsCompleted)
+    });
   }
 
-  onSubmit(form){
+  onSubmit(form) {
     const updatePost: Posting = {
-      title: form.value.title,
-      details: form.value.details,
-      address: form.value.address,
-      city: form.value.city,
-      state: form.value.state,
-      nameOfProvider:	form.value.nameOfProvider,
-      category: form.value.category,
-      dateAvailable: form.value.dateAvailable,
-      isCompleted: form.value.isCompleted
+      PostID: form.value.PostID,
+      Title: form.value.Title,
+      Details: form.value.Details,
+      Address: form.value.Address,
+      City: form.value.City,
+      State: form.value.State,
+      NameOfProvider: form.value.NameOfProvider,
+      Category: form.value.Category,
+      DateAvailable: form.value.DateAvailable,
+      IsCompleted: form.value.IsCompleted
     };
 
     console.log(this.postingEditForm.value);
