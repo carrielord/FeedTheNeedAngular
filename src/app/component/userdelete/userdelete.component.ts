@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
-
-import { User } from 'src/app/models/user';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/models/User';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-useredit',
-  templateUrl: './useredit.component.html',
-  styleUrls: ['./useredit.component.css']
+  selector: 'app-userdelete',
+  templateUrl: './userdelete.component.html',
+  styleUrls: ['./userdelete.component.css']
 })
-export class UserEditComponent implements OnInit {
+export class UserDeleteComponent implements OnInit {
 
   user: User;
-
-  editUserForm: FormGroup;
+  deleteUserForm: FormGroup;
+  
   constructor(private _form: FormBuilder,
               private _userService:UserService, private _router: Router) { 
 
@@ -27,7 +26,7 @@ export class UserEditComponent implements OnInit {
   ngOnInit() {
   }
   createForm() {
-    this.editUserForm = this._form.group({
+    this.deleteUserForm = this._form.group({
     //     FirstName: string;
     // LastName: string;
     // Email: string;

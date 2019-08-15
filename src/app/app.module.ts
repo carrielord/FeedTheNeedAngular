@@ -21,7 +21,7 @@ import { OrganizationDetailsComponent } from './component/organization/organizat
 import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
-import { UsereditComponent } from './component/useredit/useredit.component';
+import { UserEditComponent } from './component/useredit/useredit.component';
 import { UserdetailsComponent } from './component/userdetails/userdetails.component';
 import { PasswordchangeComponent } from './component/passwordchange/passwordchange.component';
 import { ContactpageComponent } from './component/contactpage/contactpage.component';
@@ -29,19 +29,9 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { UserdeleteComponent } from './userdelete/userdelete.component';
 
-const routes = [
-  { path: 'register', component: RegisterComponent },
-  { path: 'listofpostings', component: ListofpostingsComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'organizationindex', component: OrganizationindexComponent },
-  { path: 'organizationcreate', component: OrganizationcreateComponent },
-  { path: 'organizationedit', component: OrganizationeditComponent },
-  { path: 'passwordchange', component: PasswordchangeComponent },
-  { path: 'postingcreate', component: PostingcreateComponent },
-  { path: 'postingdetail', component: PostingdetailComponent },
-  { path: 'postingedit', component: PostingeditComponent },
-]
+
 
 
 @NgModule({
@@ -59,11 +49,12 @@ const routes = [
     OrganizationeditComponent,
     LoginComponent,
     RegisterComponent,
-    UsereditComponent,
+    UserEditComponent,
     UserdetailsComponent,
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
+    UserdeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
   ],

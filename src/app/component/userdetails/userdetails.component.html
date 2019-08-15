@@ -3,7 +3,7 @@
 <h1>Details</h1>
 <hr>
    <div>
-       <label for="user">first name:</label>
+       <label for="">first name:</label>
        <span>
            {{user.FirstName}}
        </span>
@@ -27,7 +27,8 @@
        </span>
    </div>
    <br>
-<button mat-raised-button class="nav-btn" color="accent">Edit</button>
-<button mat-raised-button class="nav-btn" color="primary" routerLink="/userdetails">Back to List</button>
+<button mat-raised-button class="nav-btn" routerLink ="/useredit">Edit</button>
+<button mat-raised-button class="nav-btn" routerLink="/userdelete">Delete your account</button>
+<button mat-raised-button class="nav-btn" routerLink="/userdetails">Back to List</button>
 </div>
 </div>
