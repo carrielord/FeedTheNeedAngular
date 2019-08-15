@@ -32,6 +32,7 @@ export class UserEditComponent implements OnInit {
     // LastName: string;
     // Email: string;
     // PhoneNumber: string;
+    UserID: new FormControl(this.user.UserID),
     FirstName: new FormControl(this.user.FirstName),
     LastName: new FormControl(this.user.LastName),
     Email: new FormControl(this.user.Email),
@@ -46,6 +47,7 @@ export class UserEditComponent implements OnInit {
     // LastName: string;
     // Email: string;
     // PhoneNumber: string;
+      UserID: form.value.UserID,
       FirstName: form.value.FirstName,
       LastName: form.value.LastName,
       Email: form.value.Email,
