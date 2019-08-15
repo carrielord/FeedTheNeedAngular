@@ -1,0 +1,27 @@
+<div class="organizationMargin">
+        <div class="organizationComponent">
+<h1>Details</h1>
+
+<hr>
+<div *ngIf="organization">
+    <div>
+        <label for="">OrganizationID: </label>
+        <span>{{organization.OrganizationID}}</span>
+    </div>
+    <div>
+        <label for="">OrganizationName: </label>
+        <span>{{organization.OrganizationName}}</span>
+    </div>
+    <div>
+        <label for="">OrganizationBio: </label>
+        <span>{{organization.OrganizationBio}}</span>
+    </div>
+    <div>
+        <label for="">OrganizationLink: </label>
+        <span>{{organization.OrganizationLink}}</span>
+    </div>
+</div>
+<br>
+<button mat-raised-button class="nav-btn" color="primary" >Edit</button>
+<button  mat-raised-button class="nav-btn" color="primary" routerLink="/organizations">Back to List</button>
+</div>

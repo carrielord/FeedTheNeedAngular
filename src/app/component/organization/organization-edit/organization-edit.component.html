@@ -1,5 +1,6 @@
-<p>organizationedit works!</p>
-<h1>Edit a Organization.</h1>
+<div class="organizationMargin">
+        <div class="organizationComponent">
+<h1>Edit an Organization</h1>
 <hr>
 
 <div *ngIf="organization">
@@ -7,7 +8,7 @@
         <div>
             <div hidden>
                 <mat-form-field>
-                    <input matInput placeholder="OrganizationID" formControlName="OrganizationID" Type="OrganizationID" required [value]="organization.OrganizationName" />
+                    <input matInput placeholder="OrganizationID" formControlName="OrganizationID" Type="OrganizationID" required [value]="organization.OrganizationID" />
                 </mat-form-field>
             </div>
 
@@ -19,7 +20,7 @@
 
             <div>
                 <mat-form-field>
-                    <input matInput placeholder="OrganizationLink" formControlName="OrganizationLink" type="OrganizationLink" required [value]="organization.OrganizationName" />
+                    <input matInput placeholder="OrganizationLink" formControlName="OrganizationLink" type="OrganizationLink" required [value]="organization.OrganizationLink" />
                 </mat-form-field>
             </div>
 
@@ -31,7 +32,8 @@
             
         </div>
         <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-    </form>
+        <a mat-raised-button class="nav-btn" color="primary" routerLink="/organizations">Back to List</a>
+</form>
 </div>
-
-<a mat-button routerLink="/Organizations">Back to List</a>
+</div>
+</div>

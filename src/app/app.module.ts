@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule} from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,12 +14,14 @@ import { ListofpostingsComponent } from './component/listofpostings/listofpostin
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component';
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component';
 import { PostingeditComponent } from './component/postingedit/postingedit.component';
-import { OrganizationindexComponent } from './component/organizationindex/organization-index.component';
-import { OrganizationcreateComponent } from './component/organizationcreate/organization-create.component';
-import { OrganizationeditComponent } from './component/organizationedit/organization-edit.component';
+import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
+import { OrganizationcreateComponent } from './component/organization/organization-create/organization-create.component';
+import { OrganizationeditComponent } from './component/organization/organization-edit/organization-edit.component';
+import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
+import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
-import { UsereditComponent } from './component/useredit/useredit.component';
+import { UserEditComponent } from './component/useredit/useredit.component';
 import { UserdetailsComponent } from './component/userdetails/userdetails.component';
 import { PasswordchangeComponent } from './component/passwordchange/passwordchange.component';
 import { ContactpageComponent } from './component/contactpage/contactpage.component';
@@ -28,19 +30,9 @@ import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component';
+import { UserDeleteComponent } from './component/userdelete/userdelete.component';
 
-const routes = [
-  { path: 'register', component: RegisterComponent },
-  { path: 'listofpostings', component: ListofpostingsComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'organizationindex', component: OrganizationindexComponent },
-  { path: 'organizationcreate', component: OrganizationcreateComponent },
-  { path: 'organizationedit', component: OrganizationeditComponent },
-  { path: 'passwordchange', component: PasswordchangeComponent },
-  { path: 'postingcreate', component: PostingcreateComponent },
-  { path: 'postingdetail', component: PostingdetailComponent },
-  { path: 'postingedit', component: PostingeditComponent },
-]
+
 
 @NgModule({
   declarations: [
@@ -57,12 +49,15 @@ const routes = [
     OrganizationeditComponent,
     LoginComponent,
     RegisterComponent,
-    UsereditComponent,
+    UserEditComponent,
     UserdetailsComponent,
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
     PostingdeleteComponent,
+    UserDeleteComponent,
+    OrganizationDetailsComponent,
+    OrganizationdeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +72,8 @@ const routes = [
     MatTableModule,
     MatCardModule,
     MatGridListModule,
-    AppRoutingModule
+    MatFormFieldModule,
+    AppRoutingModule,
   ],
 
   providers: [

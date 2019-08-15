@@ -1,23 +1,28 @@
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
 .nav-btn {
     margin-right: 0.5em;
     background-color: #414a4c;
-    color: #ffffff;
+    color: #FFFFFF;
     box-shadow: #005555;
 }
 
 .nav-btn:hover{
     margin-right: 0.5em;
     background-color: #333a3c;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
-.registermargin {    
+.organizationMargin {    
     padding-left: 40%;
     padding-right: 40%;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.registercomponent {
+.organizationComponent {
     text-align: center;
     padding-top: 2%;
     padding-bottom: 3%;
@@ -28,4 +33,5 @@
     border-style: solid;
     border-width: 4px;
     background-color: rgba(0, 42, 109, .1);
+    border-radius: 5%;
 }

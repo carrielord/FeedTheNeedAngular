@@ -1,4 +1,6 @@
-<h1>Create a Organization.</h1>
+<div class="organizationMargin">
+        <div class="organizationComponent">
+<h1>Create an Organization</h1>
 <hr>
 
 <form #f="ngForm" (ngSubmit)="onSubmit()" [formGroup]="organizationForm">
@@ -20,6 +22,7 @@
     </div>
   </div>
   <button mat-raised-button class="nav-btn" color="primary" type="submit">Create Organization</button>
+  <button mat-raised-button class="nav-btn" color="primary" routerLink="/organizations">Back to List</button>
 </form>
-
-<a mat-button routerLink="/organizations">Back to List</a>
+</div>
+</div>
