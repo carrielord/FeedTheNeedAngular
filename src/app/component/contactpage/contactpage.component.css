@@ -20,7 +20,8 @@ h1 {
 }
 
 .example-card {
-    max-width: 50%;
+    max-height: 40vw;
+    max-width: 40vw;
   }
   
   .example-header-image {
