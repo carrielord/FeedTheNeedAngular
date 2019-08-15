@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Posting } from '../models/posting';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const Api_Url = 'https://feedtheneed.azurewebsites.net/api';
+const Api_Url = 'https://localhost:44381/api';
 
 @Injectable({
   providedIn: 'root'

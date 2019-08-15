@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { PostingService } from 'src/app/services/posting.service';
 import { Posting } from 'src/app/models/posting';
-import { format } from 'util';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -13,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PostingeditComponent implements OnInit {
 
   posting: Posting;
-  private _postingEditForm: FormGroup;
+  postingEditForm: FormGroup;
 
   constructor(private _form: FormBuilder, private _postingService: PostingService, private _activatedRoute: ActivatedRoute, private _router: Router ) {
     this._activatedRoute.paramMap.subscribe(p => {
@@ -29,7 +28,8 @@ export class PostingeditComponent implements OnInit {
 
 
   editForm(){
-    this._postingEditForm = this._form.group({	
+    this.postingEditForm = this._form.group({	
+      postID: new FormControl(this.posting.postID),
       title: new FormControl(this.posting.title),
       details: new FormControl(this.posting.details),
       address: new FormControl(this.posting.address),	
@@ -55,7 +55,7 @@ export class PostingeditComponent implements OnInit {
       isCompleted: form.value.isCompleted
     };
 
-    console.log(this._postingEditForm.value);
+    console.log(this.postingEditForm.value);
     this._postingService.updatePost(updatePost).subscribe(d => {
       this._router.navigate(['/posting/list'])
     });

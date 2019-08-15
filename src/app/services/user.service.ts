@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import{HttpClient, HttpHeaders} from '@angular/common/http';
 import{User} from '../models/user';
-const ApiUrl = 'https://feedtheneed.azurewebsites.net/api';
+const ApiUrl = 'https://localhost:44381/api';
 @Injectable()
 export class UserService {
   constructor(private _http: HttpClient) { }
