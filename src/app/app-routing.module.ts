@@ -8,6 +8,7 @@ import { PasswordchangeComponent } from './component/passwordchange/passwordchan
 import { PostingcreateComponent } from './component/postingcreate/postingcreate.component'
 import { PostingdetailComponent } from './component/postingdetail/postingdetail.component'
 import { PostingeditComponent } from './component/postingedit/postingedit.component'
+import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component'
 import { RegisterComponent } from './component/register/register.component'
 import { UserdetailsComponent } from './component/userdetails/userdetails.component'
 import { UserEditComponent } from './component/useredit/useredit.component'
@@ -21,8 +22,16 @@ import { OrganizationDetailsComponent } from './component/organization/organizat
 const routes: Routes = [
   
   { path: 'register', component: RegisterComponent },
-  { path: 'listofpostings', component: ListofpostingsComponent },
   { path: 'login', component: LoginComponent },
+
+  { path: 'posting', children: [
+    { path: 'list', component: ListofpostingsComponent },
+    { path: 'create', component: PostingcreateComponent },
+    { path: 'detail/:id', component: PostingdetailComponent },
+    { path: 'edit/:id', component: PostingeditComponent },
+    { path: 'delete/:id', component: PostingdeleteComponent },
+  ]
+},
   { 
     path: 'organizations', children: [
       { path: '', component: OrganizationindexComponent },
@@ -46,7 +55,7 @@ const routes: Routes = [
 
 @NgModule({
   // other imports here
-  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
+  imports: [RouterModule.forRoot(routes)], // {enableTracing: true}
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

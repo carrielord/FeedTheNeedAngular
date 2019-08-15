@@ -29,8 +29,9 @@ import { OrganizationService } from './services/organization.service';
 import { PostingService } from './services/posting.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
-import { UserdeleteComponent } from './userdelete/userdelete.component';
-
+import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component';
+import { UserDeleteComponent } from './component/userdelete/userdelete.component';
+import { PersonalizedlistofpostingsComponent } from './component/personalizedlistofpostings/personalizedlistofpostings.component';
 
 
 
@@ -54,9 +55,11 @@ import { UserdeleteComponent } from './userdelete/userdelete.component';
     PasswordchangeComponent,
     ContactpageComponent,
     HeaderComponent,
-    UserdeleteComponent,
+    PostingdeleteComponent,
+    UserDeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
+    PersonalizedlistofpostingsComponent,
   ],
   imports: [
     BrowserModule,
