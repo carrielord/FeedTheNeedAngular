@@ -1,0 +1,40 @@
+<h1>Feed</h1>
+<a mat-raised-button color="primary" routerLink="/posting/create">Create New</a>
+<hr/>
+
+<div>
+    <mat-table #table [dataSource]="dataSource">
+        <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+        <ng-container matColumnDef="details">
+            <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+            <mat-cell *matCellDef="let posting" routerLink="/posting/detail/{{posting.PostID}}"> <i class="material-icons">library_books</i></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Title">
+            <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+            <mat-cell *matCellDef="let posting"> {{posting.Title}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="State">
+            <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+            <mat-cell *matCellDef="let posting"> {{posting.State}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Available Until">
+            <mat-header-cell *matHeaderCellDef> Available Until </mat-header-cell>
+            <mat-cell *matCellDef="let posting"> {{posting.DateAvaiableUntil | date: 'fullDate'}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="buttons">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let posting">
+                <i mat-icon class="material-icons" routerLink="/posting/edit/{{posting.PostID}}">edit</i> 
+                <i class="material-icons" routerLink="/posting/delete/{{posting.PostID}}">delete</i>
+                <i class="material-icons" routerLink="/posting/detail/{{posting.PostID}}">detials</i></mat-cell>
+        </ng-container>
+    </mat-table>
+</div>
+
+<!-- *ngIf(posting.UserID!=user.UserID) -->

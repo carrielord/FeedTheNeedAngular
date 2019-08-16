@@ -1,1 +1,49 @@
-<p>postingdetail works!</p>
+<h1>Details</h1>
+
+<hr/>
+
+<div *ngIf="posting">
+    <div>
+        <label for="">Title:</label>
+        <span>{{posting.Title}}</span>
+    </div>
+    <div>
+        <label for="">Details:</label>
+        <span>{{posting.Details}}</span>
+    </div>
+    <div>
+        <label for="">Address:</label>
+        <span>{{posting.Address}}</span>
+    </div>
+    <div>
+        <label for="">City:</label>
+        <span>{{posting.City}}</span>
+    </div>
+    <div>
+        <label for="">State:</label>
+        <span>{{posting.State}}</span>
+    </div>
+    <div>
+        <label for="">Organization:</label>
+        <span>{{posting.NameOfProvider}}</span>
+    </div>
+    <div>
+        <label for="">Category:</label>
+        <span>{{posting.Category}}</span>
+    </div>
+    <div>
+        <label for="">Date Posted:</label>
+        <span>{{posting.DatePosted}}</span>
+    </div>
+    <div>
+        <label for="">Available Until:</label>
+        <span>{{posting.DateAvailableUntil}}</span>
+    </div>
+    <div>
+        <label for="">Is Completed:</label>
+        <span>{{posting.IsCompleted}}</span>
+    </div>
+</div>
+
+<a mat-button routerLink="/posting/list">Back to Feed</a>
+<a mat-button routerLink="/posting/edit/{{posting.PostID}}">Edit</a>
