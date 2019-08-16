@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import{HttpClient, HttpHeaders} from '@angular/common/http';
 import{User} from '../models/user';
-import { APIURL } from '../../environments/environment.prod';
+// import { APIURL } from '../../environments/environment.prod';
 
-// const ApiUrl = 'https://localhost:44381/';
+const APIURL = 'https://localhost:44381/';
 @Injectable()
 export class UserService {
   constructor(private _http: HttpClient) { }
