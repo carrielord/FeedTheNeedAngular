@@ -60,6 +60,7 @@ import { PersonalizedlistofpostingsComponent } from './component/personalizedlis
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
     PersonalizedlistofpostingsComponent,
+    PostingeditComponent
   ],
   imports: [
     BrowserModule,
