@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Organization } from 'src/app/models/Organization';
-import { OrganizationService } from 'src/app/services/organization.service';
+import { Organization } from '../../../models/organization';
+import { OrganizationService } from '../../../services/organization.service';
 
 @Component({
   selector: 'app-organization-delete',
