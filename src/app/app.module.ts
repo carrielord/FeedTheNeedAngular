@@ -59,8 +59,8 @@ import { PersonalizedlistofpostingsComponent } from './component/personalizedlis
     UserDeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
-    PersonalizedlistofpostingsComponent,
-    PostingeditComponent
+    PersonalizedlistofpostingsComponent
+ 
   ],
   imports: [
     BrowserModule,

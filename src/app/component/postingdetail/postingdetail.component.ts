@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PostingService } from 'src/app/services/posting.service';
+import { PostingService } from '../../services/posting.service';
 import { MatTableDataSource } from '@angular/material';
-import { Posting } from 'src/app/models/posting';
+import { Posting } from '../../models/posting';
 import { ActivatedRoute } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-postingdetail',

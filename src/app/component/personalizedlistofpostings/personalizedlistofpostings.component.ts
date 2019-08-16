@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PostingService } from 'src/app/services/posting.service';
-import { Posting } from 'src/app/models/posting';
+import { PostingService } from '../../services/posting.service';
+import { Posting } from '../../models/posting';
 import { MatTableDataSource } from '@angular/material';
-import { User } from 'src/app/models/User';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-personalizedlistofpostings',
