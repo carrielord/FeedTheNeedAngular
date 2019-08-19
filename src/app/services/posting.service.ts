@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import{Posting} from '../models/posting';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { APIURL } from '../../environments/environment.prod';
+
+//import { APIURL } from '../../environments/environment.prod';
 
 
-const APIURL = 'https://localhost:44381/api';
+ const APIURL = 'https://localhost:44381/api';
+
 
 @Injectable({
   providedIn: 'root'
