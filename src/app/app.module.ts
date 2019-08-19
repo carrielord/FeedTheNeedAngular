@@ -32,6 +32,9 @@ import { AuthService } from './services/auth.service';
 import { PostingdeleteComponent } from './component/postingdelete/postingdelete.component';
 import { UserDeleteComponent } from './component/userdelete/userdelete.component';
 import { PersonalizedlistofpostingsComponent } from './component/personalizedlistofpostings/personalizedlistofpostings.component';
+import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
+import { UserlistComponent } from './component/userlist/userlist.component';
+
 
 
 
@@ -59,7 +62,9 @@ import { PersonalizedlistofpostingsComponent } from './component/personalizedlis
     UserDeleteComponent,
     OrganizationDetailsComponent,
     OrganizationdeleteComponent,
-    PersonalizedlistofpostingsComponent
+    PersonalizedlistofpostingsComponent,
+    PostinguserdetailComponent,
+    UserlistComponent
  
   ],
   imports: [
