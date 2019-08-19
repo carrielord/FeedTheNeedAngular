@@ -11,7 +11,7 @@ import { OrganizationService } from '../../../services/organization.service';
 })
 export class OrganizationindexComponent implements OnInit {
 
-  columnNames = ['OrganizationID', 'OrganizationName', 'OrganizationBio', 'OrganizationLink', 'buttons' ];
+  columnNames = ['OrganizationName', 'OrganizationBio', 'OrganizationLink', 'buttons' ];
   dataSource: MatTableDataSource<Organization>;
 
   constructor(private _organizationService: OrganizationService) { }

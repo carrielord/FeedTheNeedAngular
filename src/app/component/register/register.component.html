@@ -34,6 +34,14 @@
                <input matInput placeholder="Last Name" formControlName="lastName" type="text" required />
            </mat-form-field>
        </div>
+       <select id = "organization" name = "organization"
+            [(ngModel)] = "organization" class = "form-control">
+        <option *ngFor="let org of organization" [value]="org.id">
+            {{org.OrganizationName}}
+        </option>
+        </select>
+
+
        <div>
            <mat-form-field>
                <input matInput placeholder="Phone Number" formControlName="phoneNumber" type="tel" required />
