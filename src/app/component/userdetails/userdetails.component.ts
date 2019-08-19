@@ -18,5 +18,10 @@ user: User;
    this._userService.getUser().subscribe((singleUser: User) => {
      this.user = singleUser;
    })
+
+  }
+     checkAdmin(){
+       if (this.user.Email == 'carrie@test.com')
+       return true;
  }
 }
