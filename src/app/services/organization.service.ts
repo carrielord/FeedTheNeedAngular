@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Organization } from '../models/Organization';
+import { Organization } from '../models/organization';
 
 const ApiUrl = 'https://localhost:44381/api';
 

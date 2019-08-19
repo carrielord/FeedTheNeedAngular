@@ -12,12 +12,12 @@ import { PostingdeleteComponent } from './component/postingdelete/postingdelete.
 import { RegisterComponent } from './component/register/register.component'
 import { UserdetailsComponent } from './component/userdetails/userdetails.component'
 import { UserEditComponent } from './component/useredit/useredit.component'
+import{UserDeleteComponent} from './component/userdelete/userdelete.component'
 import { ContactpageComponent } from './component/contactpage/contactpage.component'
 import { NgModule } from '@angular/core';
 import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
 import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
-
 
 const routes: Routes = [
   
@@ -48,7 +48,7 @@ const routes: Routes = [
 
   { path: 'userdetails', component: UserdetailsComponent },
   { path: 'useredit', component: UserEditComponent },
-
+{path: 'userdelete', component: UserDeleteComponent},
   { path: 'contactpage', component: ContactpageComponent },
   // { path: '**', component: AppComponent }
 ];

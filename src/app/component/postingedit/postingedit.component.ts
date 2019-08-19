@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { PostingService } from 'src/app/services/posting.service';
-import { Posting } from 'src/app/models/posting';
+import { PostingService } from '../../services/posting.service';
+import { Posting } from '../../models/posting';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

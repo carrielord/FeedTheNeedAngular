@@ -7,7 +7,7 @@ import{AuthService} from '../../services/auth.service';
  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
- private _registerForm: FormGroup;
+ _registerForm: FormGroup;
  constructor(private _form: FormBuilder, private _authService: AuthService) {
    this.createForm();
   }
