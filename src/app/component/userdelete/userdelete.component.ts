@@ -23,8 +23,7 @@ export class UserDeleteComponent implements OnInit {
       });
     }
 
-  ngOnInit() {
-  }
+
   createForm() {
     this.deleteUserForm = this._form.group({
     //     FirstName: string;
@@ -39,20 +38,12 @@ export class UserDeleteComponent implements OnInit {
     });
   }
 
-  onSubmit(form) {
-    console.log(this.user)
-    const updateUser: User = {
-    //     FirstName: string;
-    // LastName: string;
-    // Email: string;
-    // PhoneNumber: string;
-      UserID: form.value.UserID,
-      FirstName: form.value.FirstName,
-      LastName: form.value.LastName,
-      Email: form.value.Email,
-      PhoneNumber: form.value.PhoneNumber
-    };
-    this._userService.updateUser(updateUser).subscribe(d => {this._router.navigate(['/userdetails']);
-    })
-  }
+ onDelete(){
+
+ this._userService.deleteUser(this.user).subscribe(()=>{
+   this._router.navigate(['/']);
+ });
+}
+ngOnInit(){
+}
 }
