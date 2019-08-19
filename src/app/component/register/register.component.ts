@@ -30,10 +30,14 @@ export class RegisterComponent implements OnInit {
  organizations: Organization;
  dataSource: MatTableDataSource<Organization>;
 
- constructor(private _form: FormBuilder, private _authService: AuthService) {
+ constructor(private _organizationService: OrganizationService, private _form: FormBuilder, private _authService: AuthService) {
    this.createForm();
   }
  ngOnInit() {
+  this._organizationService.getOrganizations().subscribe((organizaions: Organization[]) => {
+  this.dataSource = new MatTableDataSource<Organization>(organizaions);
+  console.log(organizaions)
+  })
  }
  createForm(){
    this._registerForm = this._form.group({

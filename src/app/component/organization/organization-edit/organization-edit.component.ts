@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { OrganizationService } from 'src/app/services/organization.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Organization } from 'src/app/models/organization';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-notorganizatione-edit',
@@ -12,10 +14,12 @@ import { Organization } from 'src/app/models/organization';
 export class OrganizationeditComponent implements OnInit {
 
   organization: Organization;
+  user: User;
 
   editOrganizationForm: FormGroup;
   constructor(private _form: FormBuilder,
               private _organizationService:OrganizationService,
+              private _userService: UserService,
               private _ar: ActivatedRoute,
               private _router: Router) { 
 
@@ -28,6 +32,7 @@ export class OrganizationeditComponent implements OnInit {
 }
 
   ngOnInit() {
+    this.getUserRole();
   }
 
   createForm() {
@@ -38,7 +43,17 @@ export class OrganizationeditComponent implements OnInit {
       OrganizationBio: new FormControl(this.organization.OrganizationBio)
     })
   }
-
+  getUserRole(){
+    this._userService.getUser().subscribe((singleUser: User) => {
+      this.user = singleUser;
+      console.log(this.user.Role)
+    })
+  }
+  isAdmin(){
+    if(this.user.Role=='Admin'){
+      return true;
+    }
+  }
   onSubmit(form) {
     console.log(this.organization)
     const updateOrganization: Organization = {
