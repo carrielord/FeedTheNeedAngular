@@ -2,6 +2,10 @@
     flex: 1 1 auto;
 }
 
+div {
+    text-align: center;
+}
+
 .mat-toolbar {
     background-color: #002A6D;
     color: #FFFFFF;

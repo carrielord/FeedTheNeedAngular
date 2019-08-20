@@ -1,3 +1,4 @@
 .example-fill-remaining-space {
     flex: auto;
+    background-repeat: none;
 }

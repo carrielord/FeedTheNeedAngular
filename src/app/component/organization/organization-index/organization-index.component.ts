@@ -13,7 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class OrganizationindexComponent implements OnInit {
 
-  columnNames = ['OrganizationID', 'OrganizationName', 'OrganizationBio', 'OrganizationLink', 'buttons' ];
+  columnNames = ['OrganizationName', 'OrganizationBio', 'OrganizationLink', 'buttons' ];
   dataSource: MatTableDataSource<Organization>;
 
   user: User;
