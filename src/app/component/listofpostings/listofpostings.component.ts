@@ -12,7 +12,7 @@ import { User } from 'src/app/models/user';
 })
 export class ListofpostingsComponent implements OnInit {
   
-  columnNames = ['details', 'Title', 'State', 'Available Until', 'buttons']
+  columnNames = ['Title', 'State', 'Available Until', 'buttons']
   
   dataSource: MatTableDataSource<Posting>
   

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule, MatSelectModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +35,7 @@ import { PersonalizedlistofpostingsComponent } from './component/personalizedlis
 import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
 import { UserlistComponent } from './component/userlist/userlist.component';
 import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
+import { HomepageComponent } from './component/homepage/homepage.component';
 
 
 
@@ -66,7 +67,8 @@ import { UserdeleteadminComponent } from './component/userdeleteadmin/userdelete
     PersonalizedlistofpostingsComponent,
     PostinguserdetailComponent,
     UserlistComponent,
-    UserdeleteadminComponent
+    UserdeleteadminComponent,
+    HomepageComponent
  
   ],
   imports: [
@@ -83,6 +85,7 @@ import { UserdeleteadminComponent } from './component/userdeleteadmin/userdelete
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
+    MatSelectModule,
     AppRoutingModule,
   ],
 
