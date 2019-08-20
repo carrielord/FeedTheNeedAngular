@@ -11,6 +11,7 @@
     z-index: 1;
 }
 .Homebackground {
+    padding-top: 5%;
     z-index: 1;
 }
 .HomepageButtons {
@@ -50,4 +51,6 @@
 .example-card {
     max-height: 40vw;
     max-width: 40vw;
+    align-content: center;
+    margin: 0% 10% 10% 29%;
   }
