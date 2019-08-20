@@ -25,6 +25,7 @@ export class ListofpostingsComponent implements OnInit {
   ngOnInit() {
     this._postingService.getPostList().subscribe((postings: Posting[]) => {
       this.dataSource = new MatTableDataSource<Posting>(postings);
+      console.log(postings)
     });
   }
   getUserID(){
