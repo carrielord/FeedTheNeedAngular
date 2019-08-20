@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
-import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatCardModule, MatGridListModule, MatSelectModule } from '@angular/material';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +34,7 @@ import { UserDeleteComponent } from './component/userdelete/userdelete.component
 import { PersonalizedlistofpostingsComponent } from './component/personalizedlistofpostings/personalizedlistofpostings.component';
 import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
 import { UserlistComponent } from './component/userlist/userlist.component';
+import { HomepageComponent } from './component/homepage/homepage.component';
 
 
 
@@ -64,7 +65,8 @@ import { UserlistComponent } from './component/userlist/userlist.component';
     OrganizationdeleteComponent,
     PersonalizedlistofpostingsComponent,
     PostinguserdetailComponent,
-    UserlistComponent
+    UserlistComponent,
+    HomepageComponent
  
   ],
   imports: [
@@ -81,6 +83,7 @@ import { UserlistComponent } from './component/userlist/userlist.component';
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
+    MatSelectModule,
     AppRoutingModule,
   ],
 

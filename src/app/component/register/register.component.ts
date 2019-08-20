@@ -27,16 +27,18 @@ import { OrganizationService } from '../../services/organization.service';
 // }
 export class RegisterComponent implements OnInit {
  _registerForm: FormGroup;
- organizations: Organization;
+ organizations: any;
  dataSource: MatTableDataSource<Organization>;
+
 
  constructor(private _organizationService: OrganizationService, private _form: FormBuilder, private _authService: AuthService) {
    this.createForm();
   }
  ngOnInit() {
-  this._organizationService.getOrganizations().subscribe((organizaions: Organization[]) => {
-  this.dataSource = new MatTableDataSource<Organization>(organizaions);
-  console.log(organizaions)
+  this._organizationService.getOrganizations().subscribe((organizations: Organization[]) => {
+  this.dataSource = new MatTableDataSource<Organization>(organizations);
+  console.log(organizations)
+  this.organizations = organizations;
   })
  }
  createForm(){
@@ -49,9 +51,12 @@ export class RegisterComponent implements OnInit {
      OrganizationName: new FormControl,
      phoneNumber: new FormControl
    });
+   
+   
  }
  onSubmit(){
    console.log(this._registerForm.value);
+   
    this._authService
    .register(this._registerForm.value)
    .subscribe(()=>this._authService.register(this._registerForm.value));
