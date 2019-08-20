@@ -23,12 +23,12 @@
             <mat-cell *matCellDef="let user"> {{user.Email}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="buttons">
+        <ng-container matColumnDef="Buttons">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let user">
-                <i mat-icon class="material-icons" routerLink="/useredit">edit</i> 
-                <i class="material-icons" routerLink="/userdelete">delete</i>
-                <i class="material-icons" routerLink="/posting/userdetail/{{user.UserID}}">details</i></mat-cell>
+                <a href mat-icon class="material-icons" routerLink="/useredit">edit</a> 
+                <a class="material-icons" routerLink="/userdeleteadmin">delete</a>
+                <a class="material-icons" routerLink="/posting/userdetail/{{user.UserID}}">details</a></mat-cell>
         </ng-container>
     </mat-table>
 </div>

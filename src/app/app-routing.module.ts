@@ -20,6 +20,7 @@ import { OrganizationdeleteComponent } from './component/organization/organizati
 import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
 import { UserlistComponent } from './component/userlist/userlist.component';
 import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
+import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
 
 const routes: Routes = [
   
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'userdetails', component: UserdetailsComponent },
   { path: 'useredit', component: UserEditComponent },
   { path: 'userdelete', component: UserDeleteComponent },
+  { path: 'userdeleteadmin', component: UserdeleteadminComponent },
   { path: 'contactpage', component: ContactpageComponent },
   { path: 'userlist', component: UserlistComponent }
   // { path: '**', component: AppComponent }

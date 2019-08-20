@@ -24,4 +24,7 @@ export class UserService {
   deleteUser(user: User){
     return this._http.put(`${APIURL}api/Account/RemoveUser`, user, {headers: this.getHeaders()});
   }
+  deleteUserAdmin(id: string){
+    return this._http.put(`${APIURL}api/Account/RemoveUserAdmin?id=${id}`, {headers: this.getHeaders()});
+  }
 }

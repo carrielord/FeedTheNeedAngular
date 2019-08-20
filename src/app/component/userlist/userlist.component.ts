@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserlistComponent implements OnInit {
 
-  columnNames = ['First Name', 'Last Name', 'Email']
+  columnNames = ['First Name', 'Last Name', 'Email', 'Buttons']
 
   dataSource: MatTableDataSource<User>
 
