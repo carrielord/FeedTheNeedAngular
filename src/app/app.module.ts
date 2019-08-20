@@ -34,6 +34,7 @@ import { UserDeleteComponent } from './component/userdelete/userdelete.component
 import { PersonalizedlistofpostingsComponent } from './component/personalizedlistofpostings/personalizedlistofpostings.component';
 import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
 import { UserlistComponent } from './component/userlist/userlist.component';
+import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
 import { HomepageComponent } from './component/homepage/homepage.component';
 
 
@@ -66,6 +67,7 @@ import { HomepageComponent } from './component/homepage/homepage.component';
     PersonalizedlistofpostingsComponent,
     PostinguserdetailComponent,
     UserlistComponent,
+    UserdeleteadminComponent,
     HomepageComponent
  
   ],

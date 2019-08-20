@@ -31,9 +31,9 @@
         <ng-container matColumnDef="buttons">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let posting">
-                    <a mat-raised-button color="primary" class="nav-btn" routerLink="/posting/edit/{{posting.PostID}}">edit</a>
+                    <a *ngIf="currentUser == posting.UserID" mat-raised-button color="primary" class="nav-btn" routerLink="/posting/edit/{{posting.PostID}}">edit</a>
                     <a mat-raised-button color="primary" class="nav-btn" routerLink="/posting/detail/{{posting.PostID}}">detail</a>
-                    <a mat-raised-button color="primary" class="nav-btn" routerLink="/posting/delete/{{posting.PostID}}">delete</a>
+                    <a *ngIf="currentUser == posting.UserID" mat-raised-button color="primary" class="nav-btn" routerLink="/posting/delete/{{posting.PostID}}">delete</a>
             </mat-cell>
         </ng-container>
     </mat-table>

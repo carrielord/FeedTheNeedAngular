@@ -1,1 +1,34 @@
-<p>userlist works!</p>
+<h1>User Index</h1>
+
+<hr/>
+
+<div *ngIf="isAdmin()">
+    <mat-table #table [dataSource]="dataSource">
+        <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+
+        <ng-container matColumnDef="First Name">
+            <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.FirstName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Last Name">
+            <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.LastName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Email">
+            <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.Email}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Buttons">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let user">
+                <a href mat-icon class="material-icons" routerLink="/useredit">edit</a> 
+                <a class="material-icons" routerLink="/userdeleteadmin">delete</a>
+                <a class="material-icons" routerLink="/posting/userdetail/{{user.UserID}}">details</a></mat-cell>
+        </ng-container>
+    </mat-table>
+</div>

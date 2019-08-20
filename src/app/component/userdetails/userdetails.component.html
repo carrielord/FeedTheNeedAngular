@@ -28,7 +28,7 @@
         </div>
         <br>
         <button mat-raised-button class="nav-btn" routerLink="/useredit">Edit</button>
-        <button mat-raised-button class="nav-btn" routerLink="/userdelete">Delete your account</button>
+        <button *ngIf="!isAdmin()" mat-raised-button class="nav-btn" routerLink="/userdelete">Delete your account</button>
         <button mat-raised-button class="nav-btn" routerLink="/userdetails">Back to List</button>
         <button *ngIf="isAdmin()" at-raised-button class="nav-btn" routerLink="/userlist">See All Users</button>
         <button *ngIf="isAdmin()" at-raised-button class="nav-btn" routerLink="/organizations">See All
