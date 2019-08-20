@@ -10,7 +10,7 @@ import{User} from '../models/user';
 export class UserService {
   constructor(private _http: HttpClient) { }
   getUsers(){
-    return this._http.get(`${APIURL}/Account/Users`, {headers: this.getHeaders()});
+    return this._http.get(`${APIURL}api/Account/UserList`, {headers: this.getHeaders()});
   }
   private getHeaders(){
     return new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
