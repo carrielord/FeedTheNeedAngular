@@ -1,3 +1,5 @@
+<div class="UserMargin">
+        <div class="UserComponent">
 <h1>User Index</h1>
 
 <hr/>
@@ -27,8 +29,10 @@
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let user">
                 <!-- <a href mat-icon class="material-icons" routerLink="/useredit">edit</a>  -->
-                <a *ngIf="!isAdmin()" class="material-icons" routerLink="/userdeleteadmin/{{user.UserID}}">delete</a>
-                <a class="material-icons" routerLink="/userdetailsadmin/{{user.UserID}}">details</a></mat-cell>
+                <a *ngIf="!isAdmin()" mat-raised-button color="primary" class="nav-btn" routerLink="/userdeleteadmin/{{user.UserID}}">delete</a>
+                <a mat-raised-button color="primary" class="nav-btn" routerLink="/userdetailsadmin/{{user.UserID}}">details</a></mat-cell>
         </ng-container>
     </mat-table>
+</div>
+</div>
 </div>
