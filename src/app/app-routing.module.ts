@@ -56,7 +56,7 @@ const routes: Routes = [
   { path: 'userdetails', component: UserdetailsComponent },
   { path: 'useredit', component: UserEditComponent },
   { path: 'userdelete', component: UserDeleteComponent },
-  { path: 'userdeleteadmin', component: UserdeleteadminComponent },
+  { path: 'userdeleteadmin/:id', component: UserdeleteadminComponent },
   { path: 'contactpage', component: ContactpageComponent },
   { path: 'userlist', component: UserlistComponent }
   // { path: '**', component: AppComponent }
