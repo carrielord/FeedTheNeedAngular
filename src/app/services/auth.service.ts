@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { UserService } from './user.service';
 import { User } from '../models/user';
-// import { APIURL } from '../../environments/environment.prod';
+import { APIURL } from '../../environments/environment.prod';
 
-const APIURL = 'https://localhost:44381';
+// const APIURL = 'https://localhost:44381';
  
 @Injectable()
 export class AuthService {
