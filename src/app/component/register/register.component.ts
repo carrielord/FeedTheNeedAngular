@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
-import { Organization } from '../../models/organization'
-import { MatTableDataSource } from '@angular/material';
-import { OrganizationService } from '../../services/organization.service';
+import { Router } from '@angular/router';
+// import { Organization } from '../../models/organization'
+// import { MatTableDataSource } from '@angular/material';
+// import { OrganizationService } from '../../services/organization.service';
 
 @Component({
  selector: 'app-register',
@@ -27,19 +28,19 @@ import { OrganizationService } from '../../services/organization.service';
 // }
 export class RegisterComponent implements OnInit {
  _registerForm: FormGroup;
- organizations: any;
- dataSource: MatTableDataSource<Organization>;
+//  organizations: any;
 
 
- constructor(private _organizationService: OrganizationService, private _form: FormBuilder, private _authService: AuthService) {
+
+ constructor(private _form: FormBuilder, private _authService: AuthService, private _router: Router) {
    this.createForm();
   }
  ngOnInit() {
-  this._organizationService.getOrganizations().subscribe((organizations: Organization[]) => {
-  this.dataSource = new MatTableDataSource<Organization>(organizations);
-  console.log(organizations)
-  this.organizations = organizations;
-  })
+  // this._organizationService.getOrganizations().subscribe((organizations: Organization[]) => {
+  // this.dataSource = new MatTableDataSource<Organization>(organizations);
+  // console.log(organizations)
+  // this.organizations = organizations;
+  // })
  }
  createForm(){
    this._registerForm = this._form.group({
@@ -48,7 +49,7 @@ export class RegisterComponent implements OnInit {
      confirmPassword: new FormControl,
      firstName: new FormControl,
      lastName: new FormControl,
-     OrganizationName: new FormControl,
+    //  OrganizationName: new FormControl,
      phoneNumber: new FormControl
    });
    
@@ -59,6 +60,6 @@ export class RegisterComponent implements OnInit {
    
    this._authService
    .register(this._registerForm.value)
-   .subscribe(()=>this._authService.register(this._registerForm.value));
+   .subscribe(()=>this._router.navigate(['/login']));
  }
 }
