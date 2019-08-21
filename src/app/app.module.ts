@@ -36,6 +36,7 @@ import { PostinguserdetailComponent } from './component/postinguserdetail/postin
 import { UserlistComponent } from './component/userlist/userlist.component';
 import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
 import { HomepageComponent } from './component/homepage/homepage.component';
+import { UserdetailsadminComponent } from './component/userdetailsadmin/userdetailsadmin.component';
 
 
 
@@ -68,7 +69,8 @@ import { HomepageComponent } from './component/homepage/homepage.component';
     PostinguserdetailComponent,
     UserlistComponent,
     UserdeleteadminComponent,
-    HomepageComponent
+    HomepageComponent,
+    UserdetailsadminComponent
  
   ],
   imports: [

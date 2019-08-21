@@ -22,6 +22,7 @@ import { UserlistComponent } from './component/userlist/userlist.component';
 import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
 import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
 import { HomepageComponent } from './component/homepage/homepage.component'
+import { UserdetailsadminComponent } from './component/userdetailsadmin/userdetailsadmin.component';
 
 const routes: Routes = [
   
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'useredit', component: UserEditComponent },
   { path: 'userdelete', component: UserDeleteComponent },
   { path: 'userdeleteadmin/:id', component: UserdeleteadminComponent },
+  { path: 'userdetailsadmin/:id', component: UserdetailsadminComponent},
   { path: 'contactpage', component: ContactpageComponent },
   { path: 'userlist', component: UserlistComponent }
   // { path: '**', component: AppComponent }
