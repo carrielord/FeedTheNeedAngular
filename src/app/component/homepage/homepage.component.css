@@ -1,14 +1,29 @@
 .Homebackground3 {
-    background-image: url("https://cdn.pixabay.com/photo/2015/08/13/03/27/refugee-886524_960_720.jpg");
+    background-image: linear-gradient(to right, black);
+    /* background-image: url("https://cdn.pixabay.com/photo/2017/08/31/20/14/blue-2702172_960_720.jpg"); */
     background-repeat: no-repeat;
     background-size: 100%;
     z-index: 2;
-    text-align: center;
+    text-align: left;
 } 
 .Homebackground2 {
     min-height: 86.4vh;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, 1);
     z-index: 1;
+}
+.back-card {
+    background-image: linear-gradient(rgb(13, 13, 92));
+    text-align: center;
+    margin: 0em 20em 0em 20em;
+    background-size: 100%;
+    z-index: 2;
+    padding: 0px;
+}
+.front-card {
+  margin: 0em, 0em, 0em, 0em;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .4);
 }
 .Homebackground {
     padding-top: 5%;
@@ -23,13 +38,13 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 5%;
-    padding: 5.5% 4%;
+    padding: 4em 3em;
     margin-left: 3%;
     margin-right: 3%;
     text-transform: uppercase;
     transition: all 0.2s linear;
     text-decoration: none;
-    background-color: rgba(65, 74, 76, .8);
+    background-color: rgba(10, 10, 150, 0.8);
 }
 .HomepageButtons:hover {
     position: relative;
@@ -40,17 +55,23 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 5%;
-    padding: 5.5% 4%;
+    padding: 4em 3em;
     margin-left: 3%;
     margin-right: 3%;
     text-transform: uppercase;
     transition: all 0.2s linear;
     text-decoration: none;
-    background-color: rgba(20, 22.7, 23.5, .8);
+    background-color: rgba(10, 10, 50, 0.8);
+
 }
 .example-card {
     max-height: 40vw;
     max-width: 40vw;
-    align-content: center;
-    margin: 0% 10% 10% 29%;
+    text-align: left;
+    align-content: left;
+    margin: 0em 10em 5em 10em;
   }
+
+
+
+
