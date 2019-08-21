@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Posting } from 'src/app/models/posting';
 import { PostingService } from 'src/app/services/posting.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { User } from '../../models/User';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
