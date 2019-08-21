@@ -1,3 +1,5 @@
+<div class="postingMargin">
+        <div class="postingComponent">
 <h1>Delete</h1>
 <h4>Are you sure you want to delete this?</h4>
 
@@ -45,6 +47,8 @@
         <span>{{posting.IsCompleted}}</span>
     </div>
 </div>
-
-<button mat-button color="warn" (click)="onDelete()">Delete</button>
-<button mat-button color="primary" routerLink="/posting/list">Back to Feed</button>
+<br>
+<button mat-raised-button color="primary" class="nav-btn" (click)="onDelete()">Delete</button>
+<button mat-raised-button color="primary" class="nav-btn" routerLink="/posting/list">Back to Feed</button>
+</div>
+</div>

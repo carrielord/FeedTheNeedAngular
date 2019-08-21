@@ -12,17 +12,23 @@ import { PostingdeleteComponent } from './component/postingdelete/postingdelete.
 import { RegisterComponent } from './component/register/register.component'
 import { UserdetailsComponent } from './component/userdetails/userdetails.component'
 import { UserEditComponent } from './component/useredit/useredit.component'
+import { UserDeleteComponent } from './component/userdelete/userdelete.component'
 import { ContactpageComponent } from './component/contactpage/contactpage.component'
 import { NgModule } from '@angular/core';
 import { OrganizationindexComponent } from './component/organization/organization-index/organization-index.component';
 import { OrganizationdeleteComponent } from './component/organization/organization-delete/organization-delete.component';
 import { OrganizationDetailsComponent } from './component/organization/organization-details/organization-details.component';
-
+import { UserlistComponent } from './component/userlist/userlist.component';
+import { PostinguserdetailComponent } from './component/postinguserdetail/postinguserdetail.component';
+import { UserdeleteadminComponent } from './component/userdeleteadmin/userdeleteadmin.component';
+import { HomepageComponent } from './component/homepage/homepage.component'
 
 const routes: Routes = [
   
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', component: HomepageComponent },
+  
 
   { path: 'posting', children: [
     { path: 'list', component: ListofpostingsComponent },
@@ -30,6 +36,7 @@ const routes: Routes = [
     { path: 'detail/:id', component: PostingdetailComponent },
     { path: 'edit/:id', component: PostingeditComponent },
     { path: 'delete/:id', component: PostingdeleteComponent },
+    { path: 'userdetail/:id', component: PostinguserdetailComponent }
   ]
 },
   { 
@@ -48,8 +55,10 @@ const routes: Routes = [
 
   { path: 'userdetails', component: UserdetailsComponent },
   { path: 'useredit', component: UserEditComponent },
-
+  { path: 'userdelete', component: UserDeleteComponent },
+  { path: 'userdeleteadmin', component: UserdeleteadminComponent },
   { path: 'contactpage', component: ContactpageComponent },
+  { path: 'userlist', component: UserlistComponent }
   // { path: '**', component: AppComponent }
 ];
 

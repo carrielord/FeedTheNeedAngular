@@ -1,0 +1,56 @@
+.Homebackground3 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/08/13/03/27/refugee-886524_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 2;
+    text-align: center;
+} 
+.Homebackground2 {
+    min-height: 86.4vh;
+    background-color: rgba(255, 255, 255, .6);
+    z-index: 1;
+}
+.Homebackground {
+    padding-top: 5%;
+    z-index: 1;
+}
+.HomepageButtons {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5%;
+    padding: 5.5% 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    background-color: rgba(65, 74, 76, .8);
+}
+.HomepageButtons:hover {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5%;
+    padding: 5.5% 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    background-color: rgba(20, 22.7, 23.5, .8);
+}
+.example-card {
+    max-height: 40vw;
+    max-width: 40vw;
+    align-content: center;
+    margin: 0% 10% 10% 29%;
+  }

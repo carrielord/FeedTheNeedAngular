@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import{Posting} from '../models/posting';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { APIURL } from '../../environments/environment.prod';
+
+//import { APIURL } from '../../environments/environment.prod';
 
 
-// const APIURL = 'https://localhost:44381/api';
+ const APIURL = 'https://localhost:44381/api';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +23,9 @@ export class PostingService {
   }
   getPostDetail(id: string){
     return this._http.get(`${APIURL}/Posting/${id}`, { headers: this.getHeaders() });
+  }
+  getPostUserDetail(id: string){
+    return this._http.get(`${APIURL}/Account/PostingDetailUser?id=${id}`, {headers: this.getHeaders()})
   }
   updatePost(posting: Posting){
     return this._http.put(`${APIURL}/Posting`, posting, { headers: this.getHeaders() });

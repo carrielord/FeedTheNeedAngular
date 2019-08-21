@@ -14,8 +14,8 @@
         </ng-container>
 
         <ng-container matColumnDef="OrganizationID">
-            <mat-header-cell *matHeaderCellDef> Organization # </mat-header-cell>
-            <mat-cell *matCellDef="let organization"> {{organization.OrganizationID}} </mat-cell>
+                <mat-header-cell *matHeaderCellDef> Organization # </mat-header-cell>
+                <mat-cell *matCellDef="let organization"> {{organization.OrganizationID}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="OrganizationName">
@@ -37,14 +37,14 @@
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let organization">
 
-                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</a>
+                <a *ngIf="isAdmin()" mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/edit/{{organization.OrganizationID}}">edit</a>
                 <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/detail/{{organization.OrganizationID}}">detail</a>
-                <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</a>
+                <a *ngIf="isAdmin()" mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/delete/{{organization.OrganizationID}}">delete</a>
             </mat-cell>
         </ng-container>
     </mat-table>
     <br>
-    <a mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/create">Create New</a>
+    <a *ngIf="isAdmin()" mat-raised-button color="primary" class="nav-btn" routerLink="/organizations/create">Create New</a>
 </div>
 </div>
 </div>
