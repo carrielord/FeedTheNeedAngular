@@ -16,10 +16,8 @@ export class UserdeleteadminComponent implements OnInit {
   user: User;
   adminUser: User;
   posting: Posting;
-  deleteUserForm: FormGroup;
   
-  constructor(private _form: FormBuilder,
-              private _userService:UserService, private _router: Router, private _postingService: PostingService, private _activatedRoute: ActivatedRoute) { 
+  constructor(private _userService:UserService, private _router: Router, private _postingService: PostingService, private _activatedRoute: ActivatedRoute) { 
                 this._activatedRoute.paramMap.subscribe(p=>{
                   this._postingService.getPostUserDetail(p.get('id')).subscribe((singleUser: User) => {
                   this.user = singleUser;
@@ -64,7 +62,7 @@ isAdmin(){
 }
 
 onDelete(){
-
+console.log(localStorage.getItem('id_token'));
  this._userService.deleteUserAdmin(this.user.UserID).subscribe(()=>{
    this._router.navigate(['/userlist']);
  });
