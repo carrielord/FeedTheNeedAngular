@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
+This project was created to allow organizations and their employees to post when they have a charitable donation for collection as a 'Feed". Users with a need can reach out to the posters of these Feeds to collect the donation.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
