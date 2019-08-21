@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 // import { Organization } from '../../models/organization'
 // import { MatTableDataSource } from '@angular/material';
 // import { OrganizationService } from '../../services/organization.service';
@@ -31,7 +32,7 @@ export class RegisterComponent implements OnInit {
 
 
 
- constructor(private _form: FormBuilder, private _authService: AuthService) {
+ constructor(private _form: FormBuilder, private _authService: AuthService, private _router: Router) {
    this.createForm();
   }
  ngOnInit() {
@@ -59,6 +60,6 @@ export class RegisterComponent implements OnInit {
    
    this._authService
    .register(this._registerForm.value)
-   .subscribe(()=>this._authService.register(this._registerForm.value));
+   .subscribe(()=>this._router.navigate(['/login']));
  }
 }
